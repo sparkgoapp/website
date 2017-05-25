@@ -38,8 +38,11 @@ var post = [];
 	.query({'access_token':access})
 	.end((response)=>{
 		var res = response.body;
-		post[i].info.type = res.data[0].type;
-		post[i].info.media = res.data[0].url;
+		if(res.data.length){
+			post[i].info.type = res.data[0].type;
+			post[i].info.media = res.data[0].media.image.src;
+			post[i].info.url = res.data[0].url;
+		}
 		if(i == end){
 			console.log(JSON.stringify(post));	
 		}
