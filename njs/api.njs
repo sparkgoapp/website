@@ -44,7 +44,7 @@ var post = [];
 			post[i].info.url = res.data[0].url;
 		}
 		if(i == end){
-			console.log(JSON.stringify(post));	
+			console.log(JSON.stringify({'post': post}));	
 		}
 	});
   }
