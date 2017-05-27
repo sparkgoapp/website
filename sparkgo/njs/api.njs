@@ -8,8 +8,10 @@ var unirest = require('unirest');
 
 var appid = '185923091929013';
 var post = [];
+var sub = [];
+var result = {};
 
-  function Return(a,i,id,end){
+  /*function Return(a,i,id,end){
     if(a.data[0].type.search("video")!=-1){
     	//$('<br>').insertBefore("#video"+i+"");
     	//$('#video'+i).attr('src',vi[i]);
@@ -27,35 +29,42 @@ var post = [];
 	if(i == end){
 		console.log(JSON.stringify(post));
 	}
-    /*if(!vi[i]){
+    if(!vi[i]){
     	$("#video"+i+"").remove();
-	}*/
-  }
+	}
+  }*/
 
   function FBImg(id,i,access,end) {
 	unirest.get("https://graph.facebook.com/"+id+"/attachments")
 	.headers({'Accept':'application/json', 'Content-type':'application/json'})
 	.query({'access_token':access})
 	.end((response)=>{
-		var res = response.body;
-		if(res.data.length){
-			post[i].info.type = res.data[0].type;
-			post[i].info.media = res.data[0].media.image.src;
-			post[i].info.url = res.data[0].url;
-		}
-		if(i == end){
-			console.log(JSON.stringify({'post': post}));	
+		if (response && !response.body.error){
+			var res = response.body;
+			if(res.data.length){
+				post[i].info.type = res.data[0].type;
+				post[i].info.media = res.data[0].media.image.src;
+				post[i].info.url = res.data[0].url;
+			}
+			if(i == end){
+				//console.log(JSON.stringify({'post': post}));
+				result.post = post;
+				console.log(JSON.stringify(result));
+			}
 		}
 	});
   }
  
     var cid='185923091929013';
 	console.log('Content-type: application/json; charset=utf-8\n');
+	//console.log(JSON.stringify({a:[]}));
 	unirest.get('https://graph.facebook.com/oauth/access_token')
 	.headers({'Accept':'application/json', 'Content-type':'application/json'})
 	.query({'client_id':cid, 'client_secret':secret, 'grant_type':'client_credentials'})
 	.end((response)=>{
-		getId(response.body.access_token);
+		if (response && !response.body.error){
+			getId(response.body.access_token);
+		}
 	});
 
   function getId(access){
@@ -63,7 +72,13 @@ var post = [];
 	.headers({'Accept':'application/json', 'Content-type':'application/json'})
 	.query({'access_token':access})
 	.end((response)=>{
-		getPost(response.body.id,access);
+		if (response && !response.body.error){
+			//console.log(JSON.stringify(response.body));
+			sub.push({nickname: response.body.name, SID: "003", image:("https://graph.facebook.com/"+response.body.id+"/picture")});
+			result.sub = sub;
+			//console.log(JSON.stringify(result));
+			getPost(response.body.id,access);
+		}
 	});
   }
 
@@ -80,6 +95,7 @@ var post = [];
 			  	post.push(tempost);
             	if(response.body.data[i].message){
               		var mes=response.body.data[i].message;
+					post[i].info.time = response.body.data[i].created_time;
               		//document.getElementById('status').innerHTML+="<br>"+mes.replace(/\x0a/g,"<br>");
 			  		post[i].info.message = "<br>"+mes.replace(/\x0a/g,"<br>");
         	    }
