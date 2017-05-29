@@ -74,13 +74,12 @@ body{
     float:right;
     font-size:2.5vw;
     margin-top:4vw;
-    margin-right:-9vw;
+    padding-right: 1vw;
 }
 .title .time{
     float:right;
     font-size:2.5vw;
     margin-top:4vw;
-    margin-right:-8vw;
 }
 
 .title .thunder{
