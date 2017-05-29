@@ -1,5 +1,5 @@
 
-@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
 
 *{
   margin:0px;
@@ -74,12 +74,13 @@ body{
     float:right;
     font-size:2.5vw;
     margin-top:4vw;
-    padding-right: 1vw;
+    margin-right:-9vw;
 }
 .title .time{
     float:right;
     font-size:2.5vw;
     margin-top:4vw;
+    margin-right:-8vw;
 }
 
 .title .thunder{

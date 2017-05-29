@@ -1,0 +1,153 @@
+.body{
+    margin:0;
+}
+.top{
+    margin-top:8vw;
+    width:100%;
+    height:15vw;
+    position: relative;
+    
+}
+.back{
+    width:15vw;
+    float:left;
+    position:absolute;
+}
+.head{
+    width:6vw;
+    height:6vw;
+    border-radius:50%;
+    background-color:gray;
+    top:4.5vw;
+    left:46vw;
+    position:absolute;
+}
+.title{
+    width:100%;
+    height:10vw;
+    margin-bottom:1vw;
+    position:relative;
+
+}
+.bighead{
+    width:6vw;
+    height:6vw;
+    border-radius:50%;
+    background-color:gray;
+    top:2vw;
+    left:5vw;
+    float:left;
+    position:absolute;
+}
+.name{
+    font-size:3vw;
+    margin:0;
+    top:3vw;
+    left:14vw;
+    position:absolute;
+}
+.date{
+    font-size:2.5vw;
+    margin:0;
+    top:3.5vw;
+    left:65vw;
+    position:absolute;
+}
+.time{
+    font-size:2.5vw;
+    margin:0;
+    top:3.5vw;
+    left:85vw;
+    position:absolute;
+}
+.middle{
+    position:relative;
+}
+.middle .pic{
+    width:100%;
+}
+.middle .heart{
+    width:10vw;
+    left:2vw;
+    bottom:2vw;
+    position:absolute;
+}
+.middle .platform{
+    width:6vw;
+    right:6vw;
+    bottom:-3vw;
+    position:absolute;
+}
+.middle .number{
+    font-size:3vw; 
+    color:white;
+    left:13vw;
+    bottom:2vw;
+    position:absolute;
+}
+.message{
+    width:10vw;
+    margin-left:2vw;
+    padding-top:2vw;
+    padding-bottom:0vw;
+    float:left;
+}
+.text{
+    float:left;
+    font-size:3vw;
+    margin-top:-8vw;
+    margin-left:12vw;
+    margin-right:6vw;
+}
+
+.reply .replyhead{
+    width:6vw;
+    height:6vw;
+    border-radius:50%;
+    background-color:gray;
+    left:5vw;
+    float:left;
+    margin-top:2vw;
+    margin-left:7vw;
+}
+.reply .replyname{
+    font-size:3vw;
+    margin-left:2vw;
+    margin-bottom:0vw;
+    color:#8b572a;
+    float:left;
+}
+.reply .replytime{
+    font-size:3vw;
+    margin-left:2vw;
+    margin-right:60vw;
+    float:left;
+}
+.reply .replytext{
+    font-size:3vw;
+    
+    margin-left:10vw;
+    margin-right:50vw;
+    padding-top:0vw;
+    padding-left:5vw;
+    padding-bottom:0vw;
+    border-left:solid 3px gray;
+    float:left;
+}
+.reply .replytextlast{
+    font-size:3vw;
+    margin-left:10vw;
+    margin-right:50vw;
+    padding-top:0vw;
+    padding-left:5vw;
+    padding-bottom:1vw;
+    float:left;
+}
+.write{
+    font-size:3.5vw;
+    margin-left:10vw;
+    margin-right:50vw;
+    padding-top:1.5vw;
+    padding-left:5vw;
+    float:left;
+}
