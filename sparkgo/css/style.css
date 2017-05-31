@@ -74,13 +74,12 @@ body{
     float:right;
     font-size:2.5vw;
     margin-top:4vw;
-    margin-right:-9vw;
+    padding-right: 1vw;
 }
 .title .time{
     float:right;
     font-size:2.5vw;
     margin-top:4vw;
-    margin-right:-8vw;
 }
 
 .title .thunder{
@@ -105,16 +104,16 @@ body{
     float:clear;
 }
 .pic .heart{
-    width:10vw;
-    left:2vw;
-    margin-top: -12vw;
-    position:absolute;
+    width: 10vw;
+    left: 2vw;
+    bottom: 2vw;
+    position: absolute;
     
 }
 .pic .platform{
     width:6vw;
     right:6vw;
-    bottom:-3vw;
+    bottom: -2.5vw;
     position:absolute;
 }
  .pic .number{
