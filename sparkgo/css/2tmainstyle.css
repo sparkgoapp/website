@@ -1,0 +1,39 @@
+*{
+    margin:0;
+}
+.topbar{
+    margin-top:10vw;
+    width:100%;
+    height:8%;
+    position:relative;
+}
+.topbar span{
+    position:absolute;
+}
+.topbar img{
+    position:absolute;
+}
+
+
+.bar{
+    bottom: 0;
+    width:100%;
+    height:8%;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.3); 
+}
+.bar ul{
+    margin: 0;
+    padding: 0;
+}
+.bar ul li{
+    width: 20%;
+    height: 100%;
+    list-style-type: none;
+    float:left;
+}
+.bar img{
+    width:30%;
+    padding-left: 7vw;
+    padding-top: 4vw;
+}
