@@ -13,6 +13,121 @@
 .topbar img{
     position:absolute;
 }
+.sparkgo{
+    font-size: 4.5vw;
+    top:4vw;
+    left:21vw;
+}
+.logo{
+    width:6vw;
+    top:2vw;
+    left:45vw;
+}
+.mission{
+    font-size: 4.5vw;
+    top:4vw;
+    left:55vw;
+}
+.search{
+    width:12vw;
+    right:2vw;
+    top:0vw;
+}
+.ps{
+    font-size:3vw;
+    padding-left:33vw;
+    padding-top:0;
+}
+.main{
+    width:100%;
+    height:55vw;
+    margin-top:4vw;
+    position:relative;
+}
+.pic{
+    width:100%;
+    height:55vw;
+    background-color:gray;
+    position:absolute;
+    
+}
+
+.main p{
+    top:4vw;
+    left:2vw;
+    font-size: 4.5vw;
+    color:white;
+    position:absolute;
+}
+.bottom{
+    width:100%;
+    height:10vw;
+    bottom:0;
+    background-color:#515151;
+    position:absolute;
+}
+.bottom img{
+    top:3vw;
+    left:4vw;
+    position:absolute;
+}
+.number{
+    top:3vw;
+    left:11vw;
+    font-size: 3vw;
+    color:white;
+    position:absolute;
+}
+.day{
+    top:3vw;
+    right:4vw;
+    font-size: 3vw;
+    color:white;
+    position:absolute;
+}
+.middle{
+    width:100%;
+    height:30vw;
+    position:relative;
+}
+.head{
+    width:8vw;
+    height:8vw;
+    top:2vw;
+    left:2vw;
+    border-radius:50%;
+    background-color:gray;
+    position:absolute;
+}
+.name{
+    font-size: 3.5vw;
+    top:4vw;
+    left:15vw;
+    position:absolute;
+}
+.red{
+    width:4vw;
+    height:4vw;
+    top:4vw;
+    left:75vw;
+    border-radius:50%;
+    background-color:red;
+    position:absolute;
+}
+.expire{
+    font-size: 3vw;
+    top:4vw;
+    left:81vw;
+    color:red;
+    position:absolute;
+}
+.text{
+    font-size: 2.5vw;
+    top:12vw;
+    left:3vw;
+    right:5vw;
+    position:absolute;
+}
 
 
 .bar{
