@@ -44,7 +44,7 @@ function getId(access){
 function getPost(id,access){
 	unirest.get('https://graph.facebook.com/'+id+'/feed')
 	.headers({'Accept':'application/json', 'Content-type':'application/json'})
-	.query({'access_token':access, 'date_format':'U'})
+	.query({'access_token':access})
 	.end((response)=>{
 		if (response && !response.body.error){
 			//console.log(JSON.stringify(response.body));
@@ -141,7 +141,7 @@ function search(ID) {
 		var len = response.body.items.length;
 		for(var i=0;i<len;i++){
 			var item = response.body.items[i];
-			var tempost = {type:1, info:{videoId: item.id.videoId, title: item.snippet.title, date: item.snippet.publishedAt}};
+			var tempost = {type:1, info:{videoId: item.id.videoId, title: item.snippet.title, time: item.snippet.publishedAt}};
 			YTpost.push(tempost);
 			if(i == len-1){
 				result.YT = YTpost;
