@@ -20,7 +20,7 @@ var go;
 $(document).ready(()=>{
 	go = ()=>{
 		$.ajax({
-			url: 'js/api.njs',
+			url: 'luffy.ee.ncku.edu.tw/~fad11204/test/js/api.njs',
 			method: 'POST',
 			dataType: 'json',
 			trycount: 0,
