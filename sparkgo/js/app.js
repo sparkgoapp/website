@@ -22,9 +22,7 @@ $(document).ready(()=>{
 		$.ajax({
 			url: 'njs/api.njs',
 			method: 'POST',
-			dataType: 'json',
-			trycount: 0,
-			trylimit: 9,
+			data: {type:0, sub:["000","001","002"]},
 			success: function(data){
 				a=data;			
 				console.log(data);
@@ -35,25 +33,37 @@ $(document).ready(()=>{
 				console.log(xmlhttprequest);
 				console.log(textstatus);
 				console.log(message);
-				if(textstatus == "parsererror"){
-					if(this.trycount < this.trylimit){
-						this.trycount++;
-						$.ajax(this);
-					}
-				}
 			}
 		});
 	};
+
 	go();
 });
 var Datarender = (data)=>{
-	data.post = data.post.concat(data.YT);
-	$.each(data.post,function(index, value){
-		var e = $('<li><div><div class="circle"></div><p class="name"></p><img class="thunder" src="img/icn_btn_order.png"/><p class="time"></p><p class="date"></p></div><div class="pic"><div class="middle"><img class="mainpic"/><img class="heart" src="img/icn_btn_like.png"/><img class="platform" src="img/badge_ig.png"/><p class="number"></p></div><img class="message" src="img/icn_btn_message.png"/><p class="text"></p></div></li>');
-		value.info.name = data.sub[0].nickname;
-		value.info.picture = data.sub[0].image;
-		render[value.type](e,value.info);
-		//e.insertAfter('.title ul');
+	$.each(data,function(index, value){
+		var i = index;
+		$.each(value.FBpost,function(index, value){
+			value.info.index = i;
+		});
+		$.each(value.YTpost,function(index, value){
+			value.info.index = i;
+		});
+	});
+	var posts = Sort(data);
+	$.each(posts,function(index, value){
+		var e = $('<li><div><div class="circle"></div><p class="name"></p><img class="thunder" src="img/icn_btn_order.png"/><p class="time"></p><p class="date"></p></div><div class="pic"><div class="middle"><img class="mainpic"/><img class="heart" src="img/icn_btn_like.png"/><img class="platform"/><p class="number"></p></div><img class="message" src="img/icn_btn_message.png"/><p class="text"></p></div></li>');
+		e.attr("id","po"+String(index));
+		render[value.type](e,value.info,data[value.info.index].pro);
 		$('.title ul').append(e);
 	});
-}
+};
+
+var Sort = (data)=>{
+	var posts = [];
+    for(var i = 0, L = data.length; i<L ; i++){
+    	posts = posts.concat(data[i].FBpost.concat(data[i].YTpost));
+    }
+   	posts.sort((a,b)=>{return (a.info.time > b.info.time)?(-1):(1)});
+    console.log(posts);
+	return posts;
+};
