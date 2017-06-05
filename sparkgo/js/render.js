@@ -17,14 +17,22 @@ var Format_time = (T)=>{
 	return [date,time];
 };
 
+var eachpost = [];
+
 var render = [
-	(DOM, info, pro) => {
+	(DOM, info, pro, i) => {
 		DOM.find(".name").html(pro.nickname);
 		DOM.find(".circle").css("background-image","url('"+pro.image+"')").css("background-size","cover");
 		var T = new Date(info.time);
 		T = Format_time(T);
 		DOM.find(".date").html(T[0]);
 		DOM.find(".time").html(T[1]);
+		DOM.find(".mainpic").load(()=>{
+			eachpost[i]=1;
+			if(eachpost.indexOf(0)==-1){
+				tool();
+			}
+		});
 		if(!info.type || info.type == "share"){
 			DOM.find(".mainpic").attr("src",pro.image);
 		}else if(info.type.indexOf("video")!=-1 || info.type == "photo"){
@@ -39,13 +47,19 @@ var render = [
 		DOM.find(".number").html(info.likes);
 		DOM.find(".text").css("width","88vw").css("height","10vw").css("text-overflow","ellipsis").css("overflow","hidden").html(info.message);
 	},
-	(DOM, info, pro) => {
+	(DOM, info, pro, i) => {
 		DOM.find(".name").html(pro.nickname);
 		DOM.find(".circle").css("background-image","url('"+pro.image+"')").css("background-size","cover");
 		var T = new Date(info.time);
 		T = Format_time(T);
 		DOM.find(".date").html(T[0]);
 		DOM.find(".time").html(T[1]);
+		DOM.find(".mainpic").load(()=>{
+			eachpost[i]=1;
+			if(eachpost.indexOf(0)==-1){
+				tool();
+			}
+		});
 		DOM.find(".mainpic").attr("src",info.media);
 		DOM.find(".heart").css("bottom","-33vw");
 		DOM.find(".platform").css("bottom","-38vw");

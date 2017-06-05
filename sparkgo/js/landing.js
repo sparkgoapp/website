@@ -12,6 +12,6 @@ function tool() {
                   var obj = parseInt($(this).attr("id").substring(2));
                   console.log(e.target);
                   window.localStorage.setItem("page",JSON.stringify(posts[obj]));
-                  document.location.href = newurl;
+                  //document.location.href = newurl;
                   })
 }
