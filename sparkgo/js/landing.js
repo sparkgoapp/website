@@ -10,7 +10,7 @@ function tool() {
     $("li").click(function(){
                   var newurl = "1m-00-singlePost.html";
                   var obj = parseInt($(this).attr("id").substring(2));
-                  window.localStorage.setItem(page,posts[obj]);
+                  window.localStorage.setItem("page",posts[obj]);
                   document.location.href = newurl;
                   })
 }
