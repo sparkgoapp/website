@@ -16,6 +16,7 @@ function FB_load(d, s, id){
 };
 
 var go;
+var posts = [];
 
 $(document).ready(()=>{
 	go = ()=>{
@@ -51,7 +52,7 @@ var Datarender = (data)=>{
 	});
 	var posts = Sort(data);
 	$.each(posts,function(index, value){
-		var e = $('<li><div><div class="circle"></div><p class="name"></p><img class="thunder" src="img/icn_btn_order.png"/><p class="time"></p><p class="date"></p></div><div class="pic"><div class="middle"><img class="mainpic"/><img class="heart" src="img/icn_btn_like.png"/><img class="platform"/><p class="number"></p></div><img class="message" src="img/icn_btn_message.png"/><p class="text"></p></div></li>');
+		var e = $('<li><div><div class="circle"></div><p class="name"></p><img class="thunder" src="img/icn_btn_order.png"/><p class="time"></p><p class="date"></p></div><div class="pic"><div class="middle"><img class="mainpic"/><img class="heart" src="img/icn_btn_like.png"/><img class="active-heart" src="img/icn_btn_like_active.png"/><img class="platform"/><p class="number"></p></div><img class="message" src="img/icn_btn_message.png"/><p class="text"></p></div></li>');
 		e.attr("id","po"+String(index));
 		render[value.type](e,value.info,data[value.info.index].pro);
 		$('.title ul').append(e);
@@ -59,7 +60,6 @@ var Datarender = (data)=>{
 };
 
 var Sort = (data)=>{
-	var posts = [];
     for(var i = 0, L = data.length; i<L ; i++){
     	posts = posts.concat(data[i].FBpost.concat(data[i].YTpost));
     }
