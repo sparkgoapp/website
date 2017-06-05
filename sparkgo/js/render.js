@@ -35,6 +35,7 @@ var render = [
 			DOM.find(".mainpic").attr("src",info.media);
 		}
 		DOM.find(".platform").attr("src","img/badge_fb.png");
+		DOM.find(".number").html(info.likes);
 		DOM.find(".text").css("width","88vw").css("height","10vw").css("text-overflow","ellipsis").css("overflow","hidden").html(info.message);
 	},
 	(DOM, info, pro) => {
@@ -51,6 +52,7 @@ var render = [
 		i.find(".video").attr("src","https://www.youtube.com/embed/"+info.videoId);
 		i.insertBefore(DOM.find(".heart"));
 		DOM.find(".platform").attr("src","img/badge_youtube.png");
+		DOM.find(".number").html(info.likes).css("bottom","-30vw");
 		DOM.find(".text").css("width","88vw").css("height","10vw").css("text-overflow","ellipsis").css("overflow","hidden").html(info.title);
 	}
 ];
