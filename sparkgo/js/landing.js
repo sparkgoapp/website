@@ -10,6 +10,7 @@ function tool() {
     $("li").click(function(e){
                   var newurl = "1m-00-singlePost.html";
                   var obj = parseInt($(this).attr("id").substring(2));
+<<<<<<< HEAD
                   var list=$(".heart,.active-heart");
                   
                   if(!list.is(e.target) && list.has(e.target).length === 0){
@@ -18,4 +19,10 @@ function tool() {
                     document.location.href = newurl;
                   }
     })
+=======
+                  console.log(e.target);
+                  window.localStorage.setItem("page",JSON.stringify(posts[obj]));
+                  //document.location.href = newurl;
+                  })
+>>>>>>> origin/master
 }
