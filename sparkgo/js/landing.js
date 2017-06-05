@@ -7,10 +7,11 @@ function tool() {
                              $('.heart').css("display","block");
                              $('.active-heart').css("display","none");
                              });
-    $("li").click(function(){
+    $("li").click(function(e){
                   var newurl = "1m-00-singlePost.html";
                   var obj = parseInt($(this).attr("id").substring(2));
-                  window.localStorage.setItem("page",posts[obj]);
+                  console.log(e.target);
+                  window.localStorage.setItem("page",JSON.stringify(posts[obj]));
                   document.location.href = newurl;
                   })
 }
