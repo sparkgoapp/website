@@ -27,3 +27,14 @@ $.ajax({
                           console.log("sub fails");
         }
 });
+
+$('.heart').mouseover(function(){
+                            $('div.middle img:eq(0)').css("display","none");
+                            $('div.middle img:eq(1)').css("display","block");
+                            });
+
+
+$('.heart').mouseout(function(){
+                           $('div.middle img:eq(0)').css("display","block");
+                           $('div.middle img:eq(1)').css("display","none");
+                           });
