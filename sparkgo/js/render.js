@@ -35,16 +35,18 @@ var render = [
 		});
 		if(!info.type || info.type == "share"){
 			DOM.find(".mainpic").attr("src","img/img_opening.png");
-		}else if(info.type.indexOf("video")!=-1 || info.type == "photo"){
+		}else if(info.type.indexOf("video")!=-1){
 			/*DOM.find(".mainpic").remove();
 			$('<div class="fb-video mainpic" data-href="'+info.url+'" data-width="auto" data-show-text="false" data-autoplay="false"><div class="fb-xfbml-parse-ignore"></div></div>')
 			.insertBefore(DOM.find(".heart"));*/
 			DOM.find(".mainpic").attr("src",info.media);
-		}/*else if(info.type == "photo"){
+			DOM.find(".middle").append('<img class="camera" src="img/icn_video.png">');
+		}else if(info.type == "photo"){
 			DOM.find(".mainpic").attr("src",info.media);
-		}*/
+		}
 		DOM.find(".platform").attr("src","img/badge_fb.png");
 		DOM.find(".number").html(info.likes);
+		DOM.find(".number_m").html(info.comment_count);
 		DOM.find(".text").html(info.message);
 	},
 	(DOM, info, pro, i) => {
@@ -61,6 +63,7 @@ var render = [
 			}
 		});
 		DOM.find(".mainpic").attr("src",info.media);
+		DOM.find(".middle").append('<img class="camera" src="img/icn_video.png">');
 		//DOM.find(".heart").css("bottom","-33vw");
 		//DOM.find(".platform").css("bottom","-38vw");
 		/*var i = $('<div class = "w100"><iframe class = "video" frameborder="0" allowfullscreen></iframe></div>');
@@ -68,6 +71,7 @@ var render = [
 		i.insertBefore(DOM.find(".heart"));*/
 		DOM.find(".platform").attr("src","img/badge_youtube.png");
 		DOM.find(".number").html(info.likes);//.css("bottom","-30vw");
+		DOM.find(".number_m").html(info.comment_count);
 		DOM.find(".text").html(info.title);
 	}
 ];

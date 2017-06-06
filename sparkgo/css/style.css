@@ -120,11 +120,19 @@ body{
     position: absolute;
 }
 .pic .platform{
-    width:6vw;
-    right:6vw;
+    width:7vw;
+    right:3vw;
     bottom: -2.5vw;
     position:absolute;
 }
+
+.pic .camera{
+	position: absolute;
+	width: 9vw;
+	right: 2vw;
+	bottom: 4vw;
+}
+
  .pic .number{
     font-size:3vw; 
     left:13vw;
