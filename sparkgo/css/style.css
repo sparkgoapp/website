@@ -18,7 +18,7 @@ body{
 
 }
 .search{
-    top:0;
+    top:3vw;
     position: fixed;
     margin-top:3vw;
     background-color:white;
@@ -36,6 +36,11 @@ body{
     padding-top:2vw;
     border:none;
     float:left;
+	width: 100vw;
+}
+
+.search input:focus{
+	outline:none;
 }
 
 .title{
@@ -49,6 +54,7 @@ body{
 .title ul li{
     list-style-type:none;
     width:100%;
+	padding-bottom: 5vw;
 }
 
     
@@ -89,12 +95,15 @@ body{
     
 }
 .pic .text{
-    float:left;
-    font-size:3vw;
-    margin-top:-8vw;
-    margin-left:12vw;
-    margin-right:0vw;
-   
+    font-size: 3vw;
+    margin-top: 3vw;
+    margin-left: 3vw;
+    margin-right: 0vw; 
+	width: 83vw;
+	height: 5vw;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
 }
 .pic{
     margin:0;
@@ -105,11 +114,10 @@ body{
     float:clear;
 }
 .pic .heart{
-    width: 10vw;
-    left: 2vw;
-    bottom: 2vw;
+    width: 9vw;
+    left: 4vw;
+    bottom: 0vw;
     position: absolute;
-    
 }
 .pic .platform{
     width:6vw;
@@ -119,22 +127,40 @@ body{
 }
  .pic .number{
     font-size:3vw; 
-    color:white;
     left:13vw;
-    bottom:5vw;
+    bottom:2vw;
+    position:absolute;
+ }
+ .pic .number_m{
+    font-size:3vw; 
+    left:53vw;
+    bottom:2vw;
     position:absolute;
  }
 .pic .message{
-    width:10vw;
-    margin-left:2vw;
-    padding-top:2vw;
-    padding-bottom:0vw;
-    float:left;
+	width: 8vw;
+    position: absolute;
+    left: 44vw;
+    bottom: 0vw;
+}
+
+.pic .share{
+	width: 9vw;
+    position: absolute;
+    bottom: 0vw;
+    right: 4vw;
 }
 .middle{
     width:100%;
     position:relative;
 }
+
+.interact{
+	position: relative;
+    margin-top: 10vw;
+	box-shadow: 0 -0.3vw 0.8vw 0.04vw;
+}
+
 .bottom{
     float:left;
     width: 100%;
@@ -144,7 +170,7 @@ body{
 }
 .bar{
     width: 100%;
-    height:20vw;;
+    height:12vw;;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -158,26 +184,39 @@ body{
 }
 .bar ul li{
     list-style: none;
-    width: 20%;
-    height: 100%;
     float: left;
-
 }
 
-.bar ul li.b{
-    background-image: url(../img/btn_tab_main_user.png);
-    background-size: 100% ;
+.bar ul li img{
+	height: 6.5vw;
+	margin-top: 2.5vw;
 }
 
-.bar ul li.c{
-    background-image: url(../img/btn_tab_main_star_active.png);
-    background-size: 100% ;
+.bar ul li.a img{
+	content: url(../img/tab_icn_me.png);
+	margin-left: 6vw;
 }
 
-.bar ul li.d{
-    background-image: url(../img/btn_tab_main_explore.png);
-    background-size: 100% ;
+.bar ul li.b img{
+    content: url(../img/tab_icn_feed_active.png);
+	margin-left: 14.5vw;
 }
+
+.bar ul li.c img{
+    content: url(../img/tab_icn_oncall.png);
+	margin-left: 14.5vw;
+}
+
+.bar ul li.d img{
+    content: url(../img/tab_icn_mymissions.png);
+	margin-left: 14.5vw;
+}
+
+.bar ul li.e img{
+    content: url(../img/tab_icn_notification.png);
+	margin-left: 14.5vw;
+}
+
 .w100 {
 	width: 100%;
 	height: 0;
@@ -192,4 +231,21 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+.time, .date, .text, .number, .number_m {
+	color: #7c8999;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    rgba(124,138,153,0.71);
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    rgba(124,138,153,0.71);
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    rgba(124,138,153,0.71);
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    rgba(124,138,153,0.71);
 }

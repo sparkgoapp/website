@@ -34,7 +34,7 @@ var render = [
 			}
 		});
 		if(!info.type || info.type == "share"){
-			DOM.find(".mainpic").attr("src",pro.image);
+			DOM.find(".mainpic").attr("src","img/img_opening.png");
 		}else if(info.type.indexOf("video")!=-1 || info.type == "photo"){
 			/*DOM.find(".mainpic").remove();
 			$('<div class="fb-video mainpic" data-href="'+info.url+'" data-width="auto" data-show-text="false" data-autoplay="false"><div class="fb-xfbml-parse-ignore"></div></div>')
@@ -45,7 +45,7 @@ var render = [
 		}*/
 		DOM.find(".platform").attr("src","img/badge_fb.png");
 		DOM.find(".number").html(info.likes);
-		DOM.find(".text").css("width","83vw").css("height","4vw").css("text-overflow","ellipsis").css("overflow","hidden").css("white-space","nowrap").html(info.message);
+		DOM.find(".text").html(info.message);
 	},
 	(DOM, info, pro, i) => {
 		DOM.find(".name").html(pro.nickname);
@@ -68,6 +68,6 @@ var render = [
 		i.insertBefore(DOM.find(".heart"));*/
 		DOM.find(".platform").attr("src","img/badge_youtube.png");
 		DOM.find(".number").html(info.likes);//.css("bottom","-30vw");
-		DOM.find(".text").css("width","83vw").css("height","4vw").css("text-overflow","ellipsis").css("overflow","hidden").css("white-space","nowrap").html(info.title);
+		DOM.find(".text").html(info.title);
 	}
 ];
