@@ -45,7 +45,7 @@ var render = [
 		}*/
 		DOM.find(".platform").attr("src","img/badge_fb.png");
 		DOM.find(".number").html(info.likes);
-		DOM.find(".text").css("width","88vw").css("height","10vw").css("text-overflow","ellipsis").css("overflow","hidden").html(info.message);
+		DOM.find(".text").css("width","83vw").css("height","4vw").css("text-overflow","ellipsis").css("overflow","hidden").css("white-space","nowrap").html(info.message);
 	},
 	(DOM, info, pro, i) => {
 		DOM.find(".name").html(pro.nickname);
@@ -61,13 +61,13 @@ var render = [
 			}
 		});
 		DOM.find(".mainpic").attr("src",info.media);
-		DOM.find(".heart").css("bottom","-33vw");
-		DOM.find(".platform").css("bottom","-38vw");
+		//DOM.find(".heart").css("bottom","-33vw");
+		//DOM.find(".platform").css("bottom","-38vw");
 		/*var i = $('<div class = "w100"><iframe class = "video" frameborder="0" allowfullscreen></iframe></div>');
 		i.find(".video").attr("src","https://www.youtube.com/embed/"+info.videoId);
 		i.insertBefore(DOM.find(".heart"));*/
 		DOM.find(".platform").attr("src","img/badge_youtube.png");
-		DOM.find(".number").html(info.likes).css("bottom","-30vw");
-		DOM.find(".text").css("width","88vw").css("height","10vw").css("text-overflow","ellipsis").css("overflow","hidden").html(info.title);
+		DOM.find(".number").html(info.likes);//.css("bottom","-30vw");
+		DOM.find(".text").css("width","83vw").css("height","4vw").css("text-overflow","ellipsis").css("overflow","hidden").css("white-space","nowrap").html(info.title);
 	}
 ];
