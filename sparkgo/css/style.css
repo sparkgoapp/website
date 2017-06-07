@@ -8,6 +8,11 @@
 body{
     margin: 0;
 }
+
+.loading{
+	width: 100vw;
+}
+
 .topbar{
     top:0;
     position:fixed;
@@ -57,7 +62,10 @@ body{
 	padding-bottom: 5vw;
 }
 
-    
+.title ul li .post{
+	width: 100vw;
+	box-shadow: 0 1vw 2vw -2vw;
+}    
 
 .title .circle{
     float:left;
@@ -79,13 +87,14 @@ body{
 .title .date{
     float:right;
     font-size:2.5vw;
-    margin-top:4vw;
+    margin-top:3vw;
     padding-right: 1vw;
 }
 .title .time{
     float:right;
     font-size:2.5vw;
-    margin-top:4vw;
+    margin-top:3vw;
+	margin-right:3vw;
 }
 
 .title .thunder{
@@ -165,8 +174,7 @@ body{
 
 .interact{
 	position: relative;
-    margin-top: 10vw;
-	box-shadow: 0 -0.3vw 0.8vw 0.04vw;
+    height: 10vw;
 }
 
 .bottom{

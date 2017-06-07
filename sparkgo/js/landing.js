@@ -7,9 +7,9 @@ function tool() {
                              $('.heart').css("display","block");
                              $('.active-heart').css("display","none");
                              });
-    $("li").click(function(e){
+    $(".mainpic, .text, .message").click(function(e){
                   var newurl = "1m-00-singlePost.html";
-                  var obj = parseInt($(this).attr("id").substring(2));
+                  var obj = parseInt($(this).parents("li").attr("id").substring(2));
                   var list=$(".heart,.active-heart");
                   
                   if(!list.is(e.target) && list.has(e.target).length === 0){

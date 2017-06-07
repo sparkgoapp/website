@@ -56,10 +56,11 @@ var Datarender = (data)=>{
 		eachpost.push(0);
 	}
 	$.each(posts,function(index, value){
-		var e = $('<li><div><div class="circle"></div><p class="name"></p><img class="thunder" src="img/icn_btn_order.png"/><p class="time"></p><p class="date"></p></div><div class="pic"><div class="middle"><img class="mainpic"/><img class="platform"/></div><p class="text"></p><div class="interact"><img class="heart" src="img/icn_btn_like.png"/><img class="active-heart heart" style="display:none;" src="img/icn_btn_like_active.png"/><p class="number"></p><img class="message" src="img/icn_btn_message.png"/><p class="number_m"></p><img class="share" src="img/icn_sm_btn_share.png"></img></div></div></li>');
+		var e = $('<li><div class="post"><div><div class="circle"></div><p class="name"></p><p class="time"></p><p class="date"></p></div><div class="pic"><div class="middle"><img class="mainpic"/><img class="platform"/></div><p class="text"></p><div class="interact"><img class="heart" src="img/icn_btn_like.png"/><img class="active-heart heart" style="display:none;" src="img/icn_btn_like_active.png"/><p class="number"></p><img class="message" src="img/icn_btn_message.png"/><p class="number_m"></p><img class="share" src="img/icn_sm_btn_share.png"></img></div></div></div></li>');
 		e.attr("id","po"+String(index));
-		render[value.type](e,value.info,data[value.info.index].pro,index);
-		$('.title ul').append(e);
+		var loading = $('<li><div class="post"><img class="loading" src="http://i.picasion.com/pic85/57ec6365a4d9db8476b0493465e6f36e.gif"/></div></li>');
+		render[value.type](e,value.info,data[value.info.index].pro,index,loading);
+		$('.title ul').append(loading);
 	});
 };
 

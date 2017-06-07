@@ -20,7 +20,7 @@ var Format_time = (T)=>{
 var eachpost = [];
 
 var render = [
-	(DOM, info, pro, i) => {
+	(DOM, info, pro, i, L) => {
 		DOM.find(".name").html(pro.nickname);
 		DOM.find(".circle").css("background-image","url('"+pro.image+"')").css("background-size","cover");
 		var T = new Date(info.time);
@@ -28,6 +28,9 @@ var render = [
 		DOM.find(".date").html(T[0]);
 		DOM.find(".time").html(T[1]);
 		DOM.find(".mainpic").load(()=>{
+			/*L.remove();
+			$(".title ul").append(DOM);*/
+			L.replaceWith(DOM);
 			eachpost[i]=1;
 			if(eachpost.indexOf(0)==-1){
 				tool();
@@ -49,7 +52,7 @@ var render = [
 		DOM.find(".number_m").html(info.comment_count);
 		DOM.find(".text").html(info.message);
 	},
-	(DOM, info, pro, i) => {
+	(DOM, info, pro, i, L) => {
 		DOM.find(".name").html(pro.nickname);
 		DOM.find(".circle").css("background-image","url('"+pro.image+"')").css("background-size","cover");
 		var T = new Date(info.time);
@@ -57,6 +60,9 @@ var render = [
 		DOM.find(".date").html(T[0]);
 		DOM.find(".time").html(T[1]);
 		DOM.find(".mainpic").load(()=>{
+			/*L.remove();
+			$(".title ul").append(DOM);*/
+			L.replaceWith(DOM);
 			eachpost[i]=1;
 			if(eachpost.indexOf(0)==-1){
 				tool();
