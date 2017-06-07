@@ -87,7 +87,7 @@
 }
 .middle{
     width:100%;
-    height:30vw;
+    height:22vw;
     position:relative;
 }
 .head{
@@ -128,7 +128,55 @@
     right:5vw;
     position:absolute;
 }
-
+.statistics{
+    width:100%;
+    height:20vw;
+    position:relative;
+}
+.gray{
+    width:4vw;
+    height:4vw;
+    top:4vw;
+    left:4vw;
+    border-radius:50%;
+    background-color:gray;
+    position:absolute;
+}
+.jewel{
+    font-size: 3vw;
+    top:4vw;
+    left:10vw;
+    color:gray;
+    position:absolute;
+}
+.percent{
+    font-size: 3vw;
+    top:4vw;
+    left:38vw;
+    color:gray;
+    position:absolute;
+}
+.purple{
+    width:4vw;
+    height:4vw;
+    top:4vw;
+    left:65vw;
+    border-radius:50%;
+    background-color:purple;
+    position:absolute;
+}
+.missionjewel{
+    font-size: 3vw;
+    top:4vw;
+    left:70vw;
+    color:purple;
+    position:absolute;
+}
+.linegray{
+    top:5vw;
+    height: 3vw;
+    position:absolute;
+}
 
 .bar{
     bottom: 0;
