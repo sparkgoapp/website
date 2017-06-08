@@ -109,7 +109,7 @@
     width:4vw;
     height:4vw;
     top:4vw;
-    left:75vw;
+    left:78vw;
     border-radius:50%;
     background-color:red;
     position:absolute;
@@ -117,7 +117,7 @@
 .expire{
     font-size: 3vw;
     top:4vw;
-    left:81vw;
+    left:83vw;
     color:red;
     position:absolute;
 }
@@ -130,7 +130,7 @@
 }
 .statistics{
     width:100%;
-    height:20vw;
+    height:15vw;
     position:relative;
 }
 .gray{
@@ -172,12 +172,38 @@
     color:purple;
     position:absolute;
 }
-.linegray{
-    top:5vw;
-    height: 3vw;
+.lines{
+    width:100%;
+    height:5vw;
+    margin:0;
+    position:relative;
+}
+.grayline{
+    left:5vw;
+    right:5vw;
+    size: 10vw;
+    color:gray;
+    background-color: gray;
     position:absolute;
 }
-
+.orangeline{
+    left:5vw;
+    right:20vw;
+    size: 10vw;
+    color:orange;
+    background-color: orange;
+    position:absolute;
+}
+.badge{
+    width:5vw;
+    top:-2vw;
+    left:78vw;
+    position:absolute;
+}
+.blank{
+    width:100%;
+    height:8%;
+}
 .bar{
     bottom: 0;
     width:100%;
