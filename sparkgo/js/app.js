@@ -23,7 +23,7 @@ $(document).ready(()=>{
 		$.ajax({
 			url: 'https://luffy.ee.ncku.edu.tw/~fad11204/test/js/api.njs',
 			method: 'POST',
-			data: {type:0, sub:["000","001","002"]},
+			data: {type:0, sub:["010","005","002","009"]},
 			success: function(data){
 				a=data;			
 				console.log(data);
