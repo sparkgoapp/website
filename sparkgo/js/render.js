@@ -66,7 +66,7 @@ var render = [
 				}
 			});
 		}
-		if(!info.type || info.type == "share"){
+		if(!info.type){
 			DOM.find(".mainpic").attr("src","img/img_opening.png");
 		}else if(info.type.indexOf("video")!=-1){
 			/*DOM.find(".mainpic").remove();
@@ -74,7 +74,7 @@ var render = [
 			.insertBefore(DOM.find(".heart"));*/
 			DOM.find(".mainpic").attr("src",info.media);
 			DOM.find(".middle").append('<img class="camera" src="img/icn_video.png">');
-		}else if(info.type == "photo"){
+		}else if(info.type == "photo" || info.type == "profile_media" || info.type == "share"){
 			DOM.find(".mainpic").attr("src",info.media);
 		}else if(info.type == "album"){
 			DOM.find(".mainpic").load(()=>{
