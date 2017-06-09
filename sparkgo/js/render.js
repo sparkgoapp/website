@@ -65,7 +65,7 @@ var render = [
 					tool();
 				}
 			});
-		}else{
+		}else if(info.medias){
 			DOM.find(".mainpic").load(()=>{
 				L.replaceWith(DOM);
 				eachpost[i]=1;
