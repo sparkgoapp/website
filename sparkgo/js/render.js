@@ -57,13 +57,22 @@ var render = [
 		T = Format_time(T);
 		DOM.find(".date").html(T[0]);
 		DOM.find(".time").html(T[1]);
-		if(info.type != "album"){
+		if(info.media){
 			DOM.find(".mainpic").load(()=>{
 				L.replaceWith(DOM);
 				eachpost[i]=1;
 				if(eachpost.indexOf(0)==-1){
 					tool();
 				}
+			});
+		}else{
+			DOM.find(".mainpic").load(()=>{
+				L.replaceWith(DOM);
+				eachpost[i]=1;
+				if(eachpost.indexOf(0)==-1){
+					tool();
+				}
+				subpic(DOM, info.medias.slice(1));
 			});
 		}
 		if(!info.type){
@@ -74,17 +83,9 @@ var render = [
 			.insertBefore(DOM.find(".heart"));*/
 			DOM.find(".mainpic").attr("src",info.media);
 			DOM.find(".middle").append('<img class="camera" src="img/icn_video.png">');
-		}else if(info.type == "photo" || info.type == "profile_media" || info.type == "share"){
+		}else if(info.type == "photo" || info.type == "profile_media" || ((info.type == "share")&&info.media)){
 			DOM.find(".mainpic").attr("src",info.media);
-		}else if(info.type == "album"){
-			DOM.find(".mainpic").load(()=>{
-				L.replaceWith(DOM);
-				eachpost[i]=1;
-				if(eachpost.indexOf(0)==-1){
-					tool();
-				}
-				subpic(DOM, info.medias.slice(1));
-			});
+		}else if(info.type == "album" || ((info.type == "share")&&info.medias)){
 			DOM.find(".mainpic").attr("src",info.medias[0].media);
 		}
 		DOM.find(".platform").attr("src","img/badge_fb.png");
