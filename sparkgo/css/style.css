@@ -122,6 +122,29 @@ body{
     width:100%;
     float:clear;
 }
+
+.subpic{
+	position: absolute;
+	right: 0vw;	
+}
+
+.subpic img{
+	width: 33vw;
+	object-fit: cover;
+}
+
+.picmore{
+	width: 33vw;
+	bottom: 0vw;
+	background-color: rgba(13, 8, 25, 0.71);
+}
+
+.picmore p{
+	color: white;
+	text-align: center;
+	font-size: 1vw;
+}
+
 .pic .heart{
     width: 9vw;
     left: 4vw;

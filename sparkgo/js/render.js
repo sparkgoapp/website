@@ -17,6 +17,36 @@ var Format_time = (T)=>{
 	return [date,time];
 };
 
+var subpic = (DOM, Med)=>{
+	var showimg = [];
+	if(Med.length>3){
+		showimg = Med.slice(0,3);
+		showimg.push("");
+	}else{
+		showimg = Med.slice(0,Med.length);
+	}
+	$.each(showimg,(index, value)=>{
+		if(index != 3){
+			var e = $("<div></div>");
+			var g = $("<img/>");
+			e.addClass("subpic").addClass("pic"+index+"");
+			g.css("height",String(Math.floor(DOM.find(".mainpic").height()/3))+"px");
+			g.attr("src",value.media);
+			e.css("bottom",""+(2-index)*g.height()+"px");
+			e.append(g);
+			e.insertBefore(DOM.find(".platform"));
+		}else{
+			var e = $("<div></div>");
+			e.addClass("subpic").addClass("picmore").css("height",String(Math.floor(DOM.find(".mainpic").height()/3))+"px");
+			var p = $("<p></p>");
+			p.css("line-height",""+e.height()+"px");
+			p.html("+"+String(Med.length-3));
+			e.append(p);
+			e.insertAfter(DOM.find(".pic2"));
+		}
+	});
+};
+
 var eachpost = [];
 
 var render = [
@@ -27,15 +57,15 @@ var render = [
 		T = Format_time(T);
 		DOM.find(".date").html(T[0]);
 		DOM.find(".time").html(T[1]);
-		DOM.find(".mainpic").load(()=>{
-			/*L.remove();
-			$(".title ul").append(DOM);*/
-			L.replaceWith(DOM);
-			eachpost[i]=1;
-			if(eachpost.indexOf(0)==-1){
-				tool();
-			}
-		});
+		if(info.type != "album"){
+			DOM.find(".mainpic").load(()=>{
+				L.replaceWith(DOM);
+				eachpost[i]=1;
+				if(eachpost.indexOf(0)==-1){
+					tool();
+				}
+			});
+		}
 		if(!info.type || info.type == "share"){
 			DOM.find(".mainpic").attr("src","img/img_opening.png");
 		}else if(info.type.indexOf("video")!=-1){
@@ -46,6 +76,16 @@ var render = [
 			DOM.find(".middle").append('<img class="camera" src="img/icn_video.png">');
 		}else if(info.type == "photo"){
 			DOM.find(".mainpic").attr("src",info.media);
+		}else if(info.type == "album"){
+			DOM.find(".mainpic").load(()=>{
+				L.replaceWith(DOM);
+				eachpost[i]=1;
+				if(eachpost.indexOf(0)==-1){
+					tool();
+				}
+				subpic(DOM, info.medias.slice(1));
+			});
+			DOM.find(".mainpic").attr("src",info.medias[0].media);
 		}
 		DOM.find(".platform").attr("src","img/badge_fb.png");
 		DOM.find(".number").html(info.likes);
