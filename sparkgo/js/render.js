@@ -57,7 +57,7 @@ var render = [
 		T = Format_time(T);
 		DOM.find(".date").html(T[0]);
 		DOM.find(".time").html(T[1]);
-		if(info.media){
+		if(info.media || !info.type){
 			DOM.find(".mainpic").load(()=>{
 				L.replaceWith(DOM);
 				eachpost[i]=1;
