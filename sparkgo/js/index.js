@@ -18,3 +18,13 @@ $(document).ready(()=>{
 		window.location = "landing.html";
 	}
 });
+
+
+(function () {
+ $(document).on('pageinit', '#home', function () {
+                $('.ui-btn').on('click', function () {
+                                var effectName = $(this).attr('data-transition');
+                                $('#effectname').text(effectName);
+                                });
+                });
+ })()
