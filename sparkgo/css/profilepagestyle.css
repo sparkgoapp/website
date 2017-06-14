@@ -57,6 +57,7 @@
     top:15vw;
     right:5vw;
     font-size:2.5vw;
+    color:#9b9b9b;
     position:absolute;
 }
 .follow{
@@ -80,12 +81,14 @@
     font-size:3vw;
     top:10vw;
     left:9vw;
+    color:#9b9b9b;
     position:absolute;
 }
 .followtext{
     font-size:3vw;
     top:10vw;
     left:39vw;
+    color:#9b9b9b;
     position:absolute;
 }
 .followbutton{
@@ -140,6 +143,7 @@
     font-size:2.5vw;
     top:10vw;
     left:30vw;
+    color:#4a4a4a;
     position:absolute;
 }
 .expire{
@@ -159,12 +163,14 @@
     font-size:2.5vw;
     top:29.5vw;
     left:9vw;
+    color:#9b9b9b;
     position:absolute;
 }
 .percent{
     font-size:2.5vw;
     top:29.5vw;
     left:35vw;
+    color:#9b9b9b;
     position:absolute;
 }
 .purple{
@@ -223,12 +229,14 @@
     font-size:2.5vw;
     top:3vw;
     left:75vw;
+    color:#9b9b9b;
     position:absolute;
 }
 .time{
     font-size:2.5vw;
     top:3vw;
     left:85vw;
+    color:#9b9b9b;
     position:absolute;
 }
 .articlemiddle{
@@ -249,5 +257,6 @@
     font-size:3vw;
     top:60vw;
     left:3vw;
+    color:#9b9b9b;
     position:absolute;
 }
