@@ -32,7 +32,7 @@ $(document).ready(()=>{
 			comment(1);
 		}
 	}else{
-		window.location = "landing.html";
+		window.location = "login.html";
 	}
 });
 

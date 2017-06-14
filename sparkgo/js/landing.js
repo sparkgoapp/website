@@ -21,7 +21,6 @@ function tool() {
     $(".circle .name").click(function(e){
                                var newurl = "profilePage.html";
                                document.location.href = newurl;
-                               }
                                })
 
 }
