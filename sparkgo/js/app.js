@@ -15,15 +15,33 @@ function FB_load(d, s, id){
     fjs.parentNode.insertBefore(js, fjs);
 };
 
+var exec;
 var go;
 var posts = [];
 
 $(document).ready(()=>{
-	go = ()=>{
+	exec = (usr)=>{	
+		$.ajax({
+			url: 'https://luffy.ee.ncku.edu.tw/~fad11204/test/js/sub.njs',
+			method: 'POST',
+			data: {SID: usr},
+			success: function(data){
+				//a=data;		
+				console.log(data);
+				go(data);
+			},
+			error: function(xmlhttprequest, textstatus, message){
+				console.log(xmlhttprequest);
+				console.log(textstatus);
+				console.log(message);
+			}
+		});
+	};
+	go = (sub)=>{
 		$.ajax({
 			url: 'https://luffy.ee.ncku.edu.tw/~fad11204/test/js/api.njs',
 			method: 'POST',
-			data: {type:0, sub:["008"]},
+			data: {type:0, sub:sub},
 			success: function(data){
 				a=data;			
 				console.log(data);
@@ -38,7 +56,8 @@ $(document).ready(()=>{
 		});
 	};
 
-	go();
+	exec("997");
+	//go();
 });
 var Datarender = (data)=>{
 	$.each(data,function(index, value){

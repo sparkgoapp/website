@@ -1,0 +1,42 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+img {
+	width: 100vw;
+	margin-top: 10vw;
+}
+
+p {
+	font-size: 3vw;
+	margin-top: 3vw;
+	margin-bottom: 9vw;
+}
+
+button {
+	height: 13vw;
+	width: 64vw;
+	margin-bottom: 3vw;
+	color: white;
+	font-size: 4vw;
+	border: none;
+}
+
+button:focus {
+	outline: none;
+}
+
+pre {
+	text-align: center;
+}
+
+* {
+	margin: 0px;
+	font-family:'Noto Sans TC', sans-serif;
+}
+
+#FB {
+	background-color: #3b5998;
+}
+
+#YT {
+	background-color: #fe3824;
+}
