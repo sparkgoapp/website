@@ -18,14 +18,8 @@ function tool() {
                     document.location.href = newurl;
                   }
     })
-    $(".circle, .name").click(function(e){
+    $(".circle .name").click(function(e){
                                var newurl = "profilePage.html";
-                               var obj = parseInt($(this).parents("li").attr("id").substring(2));
-                               var list=$(".heart,.active-heart");
-                               
-                               if(!list.is(e.target) && list.has(e.target).length === 0){
-                               var pos = JSON.stringify(posts[obj]);
-                               window.localStorage.setItem("page",pos);
                                document.location.href = newurl;
                                }
                                })
