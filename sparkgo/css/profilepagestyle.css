@@ -102,7 +102,10 @@
     color:orange;
     border-radius:2vw;
     position:absolute;
+    background-color: white;
+    outline:none;
 }
+
 .task{
     width:90%;
     height:20%;
