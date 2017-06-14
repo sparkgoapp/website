@@ -1,0 +1,216 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+*{
+    margin:0;
+    font-family:'Noto Sans TC', sans-serif;
+}
+.topbar{
+    margin-top:10vw;
+    width:100%;
+    height:8%;
+    position:relative;
+}
+.back{
+    left:2vw;
+    width:12vw;
+    position:absolute;
+}
+.title{
+    left:38vw;
+    top:3vw;
+    font-size:4vw;
+    color:#4a4a4a;
+    position:absolute;
+}
+.keep{
+    width:12vw;
+    right:2vw;
+    position:absolute;
+}
+.main{
+    width:100%;
+    height:20%;
+    position:relative;
+}
+.head{
+    width:24vw;
+    height:24vw;
+    left:6vw;
+    top:6vw;
+    border-radius:50%;
+    background-color:gray;
+    position:absolute;
+}
+.smallicon{
+    width:4vw;
+    left:25vw;
+    top:25vw;
+    position:absolute;
+}
+.name{
+    left:40vw;
+    top:8vw;
+    font-size:4vw;
+    position:absolute;
+}
+.jewelicon{
+    width:3vw;
+    top:9vw;
+    left:83vw;
+    position:absolute;
+}
+.jewelnumber{
+    font-size:2.5vw;
+    top:8.5vw;
+    left:88vw;
+    color:#9866ff;
+    position:absolute;
+}
+.intro{
+    left:40vw;
+    top:15vw;
+    right:5vw;
+    font-size:2.5vw;
+    color:#9b9b9b;
+    position:absolute;
+}
+.follow{
+    width:100%;
+    height:10%;
+    position:relative;
+}
+.fannumber{
+    font-size:5vw;
+    top:2vw;
+    left:8vw;
+    position:absolute;
+}
+.follownumber{
+    font-size:5vw;
+    top:2vw;
+    left:40vw;
+    position:absolute;
+}
+.fantext{
+    font-size:3vw;
+    top:10vw;
+    left:9vw;
+    color:#9b9b9b;
+    position:absolute;
+}
+.followtext{
+    font-size:3vw;
+    top:10vw;
+    left:39vw;
+    color:#9b9b9b;
+    position:absolute;
+}
+.editbutton{
+    width:30vw;
+    height:7vw;
+    right:5vw;
+    top:4vw;
+    font-size:4vw;
+    text-align:center;
+    border:solid 2px #54c7fc;
+    color:#54c7fc;
+    border-radius:2vw;
+    position:absolute;
+}
+.task{
+    width:90%;
+    height:20%;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius: 1vw;
+    box-shadow:4px 4px 2vw rgba(20%,20%,20%,0.5);
+    position:relative;
+}
+.gettask{
+    width:95%;
+    top:4vw;
+    left:2.5vw;
+    position:absolute;
+}
+.articletop{
+    width:100%;
+    height:6%;
+    margin-top:5vw;
+    position:relative;
+}
+.smallhead{
+    width:6vw;
+    height:6vw;
+    top:2vw;
+    left:5vw;
+    background-color:gray;
+    border-radius:50%;
+    position:absolute;
+    
+}
+.smallname{
+    font-size:3.5vw;
+    top:2vw;
+    left:12vw;
+    position:absolute;
+}
+.date{
+    font-size:2.5vw;
+    top:3vw;
+    left:75vw;
+    color:#9b9b9b;
+    position:absolute;
+}
+.time{
+    font-size:2.5vw;
+    top:3vw;
+    left:85vw;
+    color:#9b9b9b;
+    position:absolute;
+}
+.articlemiddle{
+    width:100%;
+    position:relative;
+}
+.image{
+    width:100%;
+}
+.platform{
+    width:7vw;
+    top:52vw;
+    right:5vw;
+    position:absolute;
+}
+.articletext{
+    width:85vw;
+    font-size:3vw;
+    top:60vw;
+    left:3vw;
+    color:#9b9b9b;
+    position:absolute;
+}
+.blank{
+    width:100%;
+    height:15%;
+}
+.bar{
+    bottom: 0;
+    width:100%;
+    height:8%;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.3); 
+}
+.bar ul{
+    margin: 0;
+    padding: 0;
+}
+.bar ul li{
+    width: 20%;
+    height: 100%;
+    list-style-type: none;
+    float:left;
+}
+.bar img{
+    width:30%;
+    padding-left: 7vw;
+    padding-top: 4vw;
+}
