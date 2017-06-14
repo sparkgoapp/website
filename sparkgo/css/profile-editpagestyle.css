@@ -91,15 +91,15 @@
     color:#9b9b9b;
     position:absolute;
 }
-.followbutton{
-    width:15vw;
+.editbutton{
+    width:30vw;
     height:7vw;
     right:5vw;
     top:4vw;
     font-size:4vw;
     text-align:center;
-    border:solid 1px orange;
-    color:orange;
+    border:solid 2px #54c7fc;
+    color:#54c7fc;
     border-radius:2vw;
     position:absolute;
 }
