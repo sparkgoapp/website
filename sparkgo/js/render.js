@@ -122,3 +122,11 @@ var render = [
 		DOM.find(".text").html(info.title);
 	}
 ];
+
+var like = (post, type)=>{
+	if(type){
+		//like
+	}else{
+		//unlike
+	}
+};
