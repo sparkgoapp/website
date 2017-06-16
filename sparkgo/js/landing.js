@@ -22,5 +22,9 @@ function tool() {
                                var newurl = "profilePage.html";
                                document.location.href = newurl;
                                })
+    $(".share").click(function(e){
+                                $('.sharing').css("display","block");
+                             })
+    
 
 }
