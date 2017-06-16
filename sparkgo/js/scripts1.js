@@ -16,8 +16,7 @@ $(document).ready(function(){
     	    	console.log(data);
             	window.localStorage.setItem("SID",data.SID);
 	            window.localStorage.setItem("link","00");
-				check_token(data);
-    	        //window.location = "linksns.html";
+				check_token(data.SID);
 	    	}
 	    });
 	});
@@ -32,6 +31,7 @@ function check_token(SID){
 			console.log(err);
 		},
 		success: (data)=>{
+			console.log(data);
 			if(data.check){
 				window.location = "landing.html";
 			}else{
