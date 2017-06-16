@@ -2,10 +2,12 @@ function tool() {
     $('.heart').click(function(){
                       $(this).css("display","none");
                       $(this).parent().find(".active-heart").css("display","block");
+					  like($(this).attr("id"), 1);
                       });
     $('.active-heart').click(function(){
-                             $('.heart').css("display","block");
-                             $('.active-heart').css("display","none");
+                             $(this).css("display","none");
+                             $(this).parent().find('.heart').css("display","block");
+					  		 like($(this).attr("id"), 0);
                              });
     $(".mainpic, .text").click(function(e){
                   var newurl = "1m-00-singlePost.html";
