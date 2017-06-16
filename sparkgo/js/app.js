@@ -24,7 +24,7 @@ $(document).ready(()=>{
 		$.ajax({
 			url: 'https://luffy.ee.ncku.edu.tw/~fad11204/test/js/sub.njs',
 			method: 'POST',
-			data: {SID: usr},
+			data: {type: 0, SID: usr},
 			success: function(data){
 				//a=data;		
 				console.log(data);
