@@ -56,7 +56,7 @@ $(document).ready(()=>{
 		});
 	};
 
-	exec("997");
+	exec(window.localStorage.getItem("SID"));
 	//go();
 });
 var Datarender = (data)=>{

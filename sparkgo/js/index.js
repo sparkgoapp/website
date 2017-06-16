@@ -6,7 +6,7 @@ $(document).ready(()=>{
 		$.ajax({
 			url: U,
 			method: 'GET',
-			data: { code: code },
+			data: { code: code, SID: window.localStorage.getItem("SID") },
 			success: function(data){
 				console.log(data);
 				var tmp = window.localStorage.getItem("link");
