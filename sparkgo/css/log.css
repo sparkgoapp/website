@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 .col-md-12{
     text-align: center;
 }
@@ -42,22 +44,23 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 
 input{
     border: none;
-	  padding: 2.5vw;
+    padding: 2.5vw;
     margin: 4vw;
     width: 66.67vw;
     height: 13.33vw;
     background-color: rgba(155,155,155,0.25);
     font-size: 4.44vw;
     color: black;
+    font-family: 'Roboto', sans-serif;
 }
 
 button{
-    width: 70%;
     margin: 3vw;
     width: 66.67vw;
     height: 13.33vw;
     background-color: #ffd366;
     border: none;
+    font-size: 4.5vw;
 }
 
 .row3 div{
