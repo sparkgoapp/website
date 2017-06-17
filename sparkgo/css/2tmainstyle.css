@@ -231,12 +231,12 @@
 }
 
 .bar ul li.b img{
-    content: url(../img/tab_icn_feed_active.png);
+    content: url(../img/bar-folder.png);
   margin-left: 14.5vw;
 }
 
 .bar ul li.c img{
-    content: url(../img/tab_icn_oncall.png);
+    content: url(../img/bar-thunder.png);
   margin-left: 14.5vw;
 }
 
