@@ -46,6 +46,6 @@
     font-size:5vw;
     border:none;
     border-radius:5vw;
-    background-color:rgba(100%, 100%, 100%, 0.5);
-    position:relative;
+    background-color:rgba(100%, 100%, 100%, 0.9);
+    position:fixed;
 }
