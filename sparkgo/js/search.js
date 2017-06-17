@@ -3,13 +3,13 @@ $.ajax({
        method: 'POST',
        data:{m_u:keyword},
        success: function(data){
-                        $.each(str.items, function(index,item){
-                               $().html();
-                       });
-
+       $.each(str.items, function(index,item){
+              $().html();
+              });
+       
        },
        error: function(){
-                         $().html("Sorry, there is nothing matched");
+       $().html("Sorry, there is nothing matched");
        }
-
+       
        });

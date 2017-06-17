@@ -9,7 +9,7 @@ function tool() {
                              $(this).parent().find('.heart').css("display","block");
 					  		 like($(this).parents("li"), posts[parseInt($(this).parents("li").attr("id").substring(2))], 0);
                              });
-    $(".mainpic, .text").click(function(e){
+    $('.mainpic, .text').click(function(e){
                   var newurl = "1m-00-singlePost.html";
                   var obj = parseInt($(this).parents("li").attr("id").substring(2));
                   var list=$(".heart,.active-heart");
@@ -22,11 +22,11 @@ function tool() {
                     document.location.href = newurl;
                   }
     })
-    $(".circle .name").click(function(e){
+    $('.circle .name').click(function(e){
                                var newurl = "profilePage.html";
                                document.location.href = newurl;
                                })
-    $(".share").click(function(e){
+    $('.share').click(function(e){
                                 //$('.sharebox').fadeIn("fast");
                                 $('.sharing').animate({
 									bottom: '60vw',
@@ -37,7 +37,7 @@ function tool() {
 									opacity: '1'
 								});
                              })
-    $(".cancel").click(function(e){
+    $('.cancel').click(function(e){
                                 //$('.sharebox').fadeOut("fast");
                                 $('.sharing').animate({
 									bottom: '-50vw',
@@ -48,6 +48,11 @@ function tool() {
 									opacity: '0'
 								});
                              })
+    $('.search').keydown(function() {
+                                window.localStorage.keyword = $('#keyword').val();
+                                window.localStorage.fromwhere = "landing";
+                                document.location.href = "search.html";
+                             });
     
 
 }
