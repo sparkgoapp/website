@@ -6,7 +6,7 @@ function tool() {
                       });
     $('.active-heart').click(function(){
                              $(this).css("display","none");
-                             $(this).parent().find('.heart:eq(0)').css("display","block");
+                             $(this).parent().find('.heart').css("display","block");
 					  		 like($(this).parents("li"), posts[parseInt($(this).parents("li").attr("id").substring(2))], 0);
                              });
     $(".mainpic, .text").click(function(e){

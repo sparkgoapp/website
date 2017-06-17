@@ -145,7 +145,7 @@ body{
 	font-size: 1vw;
 }
 
-.pic .heart{
+.pic .heart, .pic .active-heart{
     width: 9vw;
     left: 4vw;
     bottom: 0vw;
