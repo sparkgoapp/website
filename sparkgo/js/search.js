@@ -46,8 +46,8 @@ $('.search').keypress(function (event) {
                   
 
 var render = (DOM, info,i) => {
-                DOM.find(".head").attr(info[i].image);
-                DOM.find(".name").html(info[i].nickname);
+                $(DOM).find(".head").attr(info[i].image);
+                $(DOM).find(".name").html(info[i].nickname);
 }
 
 
