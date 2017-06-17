@@ -1,10 +1,10 @@
 $(document).ready(function(){
                   if(window.localStorage.fromwhere == "landing"){
-                    $("input").val(window.localStorage.keyword);
+                    $(".topbar .search input").val(window.localStorage.keyword);
                     $.ajax({
                            url:'https://luffy.ee.ncku.edu.tw/~fad11204/test/js/login.njs',
                            method: 'POST',
-                           data:{m_u:$("#keyword").val()},
+                           data:{m_u:window.localStorage.keyword},
                            success: function(data){
                            $.each(data,function(index, value){
                                   var e = '<div class="item"><img class="head"></img><span class="name">網紅帳號或是名字</span><span class="text">網紅名字或是壹些其他的敘述</span><img class="youtube" src="img/badge_youtube.png"/><img class="fb" src="img/badge_fb.png"/><hr class="bottomline"></div>';
@@ -25,7 +25,7 @@ $('.search').keypress(function (event) {
                      $.ajax({
                             url:'https://luffy.ee.ncku.edu.tw/~fad11204/test/js/login.njs',
                             method: 'POST',
-                            data:{m_u:$("#keyword").val()},
+                            data:{m_u:window.localStorage.keyword},
                             success: function(data){
                             $.each(data,function(index, value){
                                    var e = '<div class="item"><img class="head"></img><span class="name">網紅帳號或是名字</span><span class="text">網紅名字或是壹些其他的敘述</span><img class="youtube" src="img/badge_youtube.png"/><img class="fb" src="img/badge_fb.png"/><hr class="bottomline"></div>';
