@@ -7,8 +7,6 @@ $(document).ready(function(){
                          data:{m_u:$("#keyword").val()},
                          success: function(data){
                          $.each(str.items, function(index,item){
-                                $().html();
-                                });
                          
                          },
                          error: function(){
@@ -25,15 +23,24 @@ $('.search').keydown(function() {
                             method: 'POST',
                             data:{m_u:$("#keyword").val()},
                             success: function(data){
-                            $.each(str.items, function(index,item){
-                                   $().html();
+                            $.each(data,function(index, value){
+                                   var e = '<div class="item"><img class="head"></img><span class="name">網紅帳號或是名字</span><span class="text">網紅名字或是壹些其他的敘述</span><img class="youtube" src="img/badge_youtube.png"/><img class="fb" src="img/badge_fb.png"/><hr class="bottomline"></div>';
+                                   render(e,value,index);
                                    });
                             
                             },
                             error: function(){
-                            $().html("Sorry, there is nothing matched");
+                            $('#fail').html("Sorry, there is nothing matched");
                             }
                             
                             });
                      });
 });
+
+var render = (DOM, info,i) => {
+                DOM.find(".head").attr(info[i].image);
+                DOM.find(".name").html(info[i].nickname);
+}
+
+
+
