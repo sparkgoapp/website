@@ -29,6 +29,10 @@ $(document).ready(function(){
                                                    else{}
                                     
                   });
+
+                  $('.back').click(function(){
+                    window.history.back()
+                  });
 });
 
 
