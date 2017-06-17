@@ -49,11 +49,8 @@ function tool() {
 								});
                              })
     $('.search').keydown(function() {
-                                window.localStorage.setItem("keyword;
-                                                            
-                                                            window.localStorage = {
-                                                                "keyword":
-                                                            }
+                                window.localStorage.keyword = $('#keyword').val();
+                                window.localStorage.fromwhere = "landing";
                                 document.location.href = "search.html";
                              });
     
