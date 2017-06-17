@@ -1,3 +1,14 @@
+.sharing{
+     width:80%;
+     height:50vw;
+     border-radius: 5vw;
+     margin-top:50vw; 
+     margin-left:auto;
+     margin-right:auto;
+     background-color:rgba(100%, 100%, 100%, 0.5);
+     position:relative;
+ }
+
 .linkpic{
     width:18vw;
     top:4vw;
