@@ -214,18 +214,38 @@
     position: fixed;
     background-color: rgba(255, 255, 255, 0.3); 
 }
-.bar ul{
-    margin: 0;
-    padding: 0;
-}
+
 .bar ul li{
-    width: 20%;
-    height: 100%;
-    list-style-type: none;
-    float:left;
+    list-style: none;
+    float: left;
 }
-.bar img{
-    width:30%;
-    padding-left: 7vw;
-    padding-top: 4vw;
+
+.bar ul li img{
+  height: 6.5vw;
+  margin-top: 2.5vw;
+}
+
+.bar ul li.a img{
+  content: url(../img/tab_icn_me.png);
+  margin-left: 6vw;
+}
+
+.bar ul li.b img{
+    content: url(../img/tab_icn_feed_active.png);
+  margin-left: 14.5vw;
+}
+
+.bar ul li.c img{
+    content: url(../img/tab_icn_oncall.png);
+  margin-left: 14.5vw;
+}
+
+.bar ul li.d img{
+    content: url(../img/tab_icn_mymissions.png);
+  margin-left: 14.5vw;
+}
+
+.bar ul li.e img{
+    content: url(../img/tab_icn_notification.png);
+  margin-left: 14.5vw;
 }
