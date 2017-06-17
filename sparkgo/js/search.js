@@ -18,7 +18,7 @@ $(document).ready(function(){
                            
                            });
                   localStorage.clear();
-                  });
+                  };
 
 $('.search').keypress(function (event) {
                      if (event.which == 13) {
@@ -38,11 +38,12 @@ $('.search').keypress(function (event) {
                             }
                             
                             });
-                     });
-                     localStorage.clear();
                      }
+                     localStorage.clear();
 
-});
+                    });
+                  });
+                  
 
 var render = (DOM, info,i) => {
                 DOM.find(".head").attr(info[i].image);
