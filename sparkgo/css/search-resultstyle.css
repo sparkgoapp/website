@@ -40,3 +40,74 @@
     position:absolute;
     right:4vw;
 }
+.middle{
+    position:relative;
+    margin-top:22vw;
+}
+.left{
+    width:35vw;
+    top:2vw;
+    position:absolute;
+}
+.result{
+    font-size:3vw;
+    top:0;
+    left:42vw;
+    position:absolute;
+}
+.right{
+    width:35vw;
+    top:2vw;
+    right:0vw;
+    position:absolute;
+}
+.item{
+    position:relative;
+    
+}
+.head{
+    width:12vw;
+    height:12vw;
+    background-color:gray;
+    margin-left:5vw;
+    margin-top:5vw;
+    border-radius:50%;
+    position:absolute;
+}
+.name{
+    left:20vw;
+    top:6vw;
+    font-size:3vw;
+    position:absolute;
+}
+.text{
+    left:20vw;
+    top:12vw;
+    font-size:3vw;
+    color:#7c8999;
+    position:absolute;
+}
+.youtube{
+    left:75vw;
+    top:6vw;
+    width:8vw;
+    position:absolute;
+}
+.ig{
+    left:80vw;
+    top:6vw;
+    width:8vw;
+    position:absolute;
+}
+.fb{
+    left:85vw;
+    top:6vw;
+    width:8vw;
+    position:absolute;
+}
+.bottomline{
+    width:90vw;
+    top:20vw;
+    left:5vw;
+    position:absolute;
+}

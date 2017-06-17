@@ -51,7 +51,7 @@ function tool() {
     $('.search').keydown(function() {
                                 window.localStorage.keyword = $('#keyword').val();
                                 window.localStorage.fromwhere = "landing";
-                                document.location.href = "search.html";
+                                document.location.href = "search-result.html";
                              });
     
 
