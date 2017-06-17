@@ -123,10 +123,38 @@ var render = [
 	}
 ];
 
-var like = (post, type)=>{
+var like = (DOM, post, type)=>{
 	if(type){
+		DOM.find(".number").html(post.info.likes + 1);
+		$.ajax({
+			url: 'https://luffy.ee.ncku.edu.tw/~fad11204/test/js/like.njs',
+			method: 'POST',
+			data: {
+				target: ((post.type)?post.info.videoId:post.info.pid),
+				FY: post.type,
+				SID: window.localStorage.getItem("SID"),
+				type: type,
+			},
+			success: (data)=>{
+				console.log(data);
+			}
+		});
 		//like
 	}else{
+		DOM.find(".number").html(post.info.likes);
+		$.ajax({
+			url: 'https://luffy.ee.ncku.edu.tw/~fad11204/test/js/like.njs',
+			method: 'POST',
+			data: {
+				target: ((post.type)?post.info.videoId:post.info.pid),
+				FY: post.type,
+				SID: window.localStorage.getItem("SID"),
+				type: type,
+			},
+			success: (data)=>{
+				console.log(data);
+			}
+		});
 		//unlike
 	}
 };
