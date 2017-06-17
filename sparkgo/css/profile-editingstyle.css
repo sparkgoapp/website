@@ -29,3 +29,11 @@
     color:#54c7fc;
     position:absolute;
 }
+.head {
+    position:relative;
+}
+.head img{
+    width:26vw;
+    left:37vw;
+    position:absolute;
+}
