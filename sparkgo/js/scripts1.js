@@ -14,6 +14,7 @@ $(document).ready(function(){
     		},
 		    success: (data)=>{
     	    	console.log(data);
+				if(!data.SID) return;
             	window.localStorage.setItem("SID",data.SID);
 	            window.localStorage.setItem("link","00");
 				check_token(data.SID);
