@@ -19,7 +19,8 @@ $(document).ready(function(){
                            });
                   });
 
-$('.search').keydown(function() {
+$('.search').keypress(function (event) {
+                     if (event.which == 13) {
                      $.ajax({
                             url:'https://luffy.ee.ncku.edu.tw/~fad11204/test/js/login.njs',
                             method: 'POST',
@@ -37,6 +38,8 @@ $('.search').keydown(function() {
                             
                             });
                      });
+                     }
+
 });
 
 var render = (DOM, info,i) => {
