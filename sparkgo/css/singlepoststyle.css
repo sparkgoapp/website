@@ -4,6 +4,16 @@
     margin:0;
     font-family:'Noto Sans TC', sans-serif;
 }
+.head{		
+     width:7vw;		
+     height:7vw;		
+     border-radius:50%;		
+     background-color:gray;		
+     top:4.5vw;		
+     left:46vw;		
+     position:absolute;		
+ }
+
 .loading{
 	width: 100vw;
 }
