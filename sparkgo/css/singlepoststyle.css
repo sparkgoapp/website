@@ -206,15 +206,7 @@ li .post{
     float:left;
     position:absolute;
 }
-.head{
-    width:6vw;
-    height:6vw;
-    border-radius:50%;
-    background-color:gray;
-    top:4.5vw;
-    left:46vw;
-    position:absolute;
-}
+
 .reply .replyhead{
     width:6vw;
     height:6vw;
