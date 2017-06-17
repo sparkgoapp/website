@@ -4,8 +4,10 @@
      border-radius: 3vw;
      background-color:rgba(100%, 100%, 100%, 0.8);
      position:fixed;
-     top: 68vw;
+     /*bottom: 60vw;*/
+	 bottom: -50vw;
      left: 10vw;
+	 opacity: 0;
  }
 
 .linkpic{
@@ -48,5 +50,7 @@
     border-radius:3vw;
     background-color:rgba(100%, 100%, 100%, 0.8);
     position:fixed;
-    bottom:45vw;
+    /*bottom:44.9vw;*/
+	bottom: -65.1vw;
+	opacity: 0;
 }

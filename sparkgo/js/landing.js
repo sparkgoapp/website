@@ -25,7 +25,26 @@ function tool() {
                                document.location.href = newurl;
                                })
     $(".share").click(function(e){
-                                $('.sharing').css("display","block");
+                                //$('.sharebox').fadeIn("fast");
+                                $('.sharing').animate({
+									bottom: '60vw',
+									opacity: '1'
+								});
+                                $('.cancel').animate({
+									bottom: '44.9vw',
+									opacity: '1'
+								});
+                             })
+    $(".cancel").click(function(e){
+                                //$('.sharebox').fadeOut("fast");
+                                $('.sharing').animate({
+									bottom: '-50vw',
+									opacity: '0'
+								});
+                                $('.cancel').animate({
+									bottom: '-65.1vw',
+									opacity: '0'
+								});
                              })
     
 
