@@ -37,3 +37,39 @@
     left:37vw;
     position:absolute;
 }
+.changepic{
+    width:30vw;
+    height:8vw;
+    left:35vw;
+    top:55vw;
+    color:#54c7fc;
+    font-size:3.5vw;
+    border:solid 0.5vw #54c7fc;
+    border-radius:1vw;
+    background-color:#ffffff;
+    position:absolute;
+}
+.name{
+    width:100%;
+    margin-top:45vw;
+    background-color:#f7f7f7;
+    position:relative;
+}
+.name span{
+    font-size:4vw;
+}
+.nametext{
+    font-size:4vw;
+}
+.intro{
+    width:100%;
+    margin-top:10vw;
+    background-color:#f7f7f7;
+    position:relative;
+}
+.intro span{
+    font-size:4vw;
+}
+.introtext{
+    font-size:4vw;
+}
