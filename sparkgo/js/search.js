@@ -1,6 +1,7 @@
 $(document).ready(function(){
                   if(window.localStorage.fromwhere == "landing"){
                     $(".topbar .search input").val(window.localStorage.keyword);
+                  if($(".topbar .search input").val() != ""){
                     $.ajax({
                            url:'https://luffy.ee.ncku.edu.tw/~fad11204/test/js/login.njs',
                            method: 'POST',
@@ -21,7 +22,9 @@ $(document).ready(function(){
                            }
                            
                            });
+                  }
                   localStorage.removeItem("keyword");
+                  localStorage.removeItem("fromwhere");
                   };
 
 $('.search').keypress(function (event) {
@@ -48,11 +51,14 @@ $('.search').keypress(function (event) {
                             });
                      }
                      localStorage.removeItem("keyword");
+                     localStorage.removeItem("fromwhere");
 
                     });
                   });
                   
-
+$('.exit').click(function (event) {
+                        $(".topbar .search input").val("搜尋Sparkgo");
+                 }
 var render = (DOM, info) => {
                 DOM.find(".head").attr("src",info.image);
 				DOM.find(".name").html(info.nickname);
