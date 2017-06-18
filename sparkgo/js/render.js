@@ -128,24 +128,27 @@ var render = [
 		T = Format_time(T);
 		DOM.find(".date").html(T[0]);
 		DOM.find(".time").html(T[1]);
-		if(info.media || !info.type){
+		if(( info.media || !info.type )&&( info.type.indexOf("video")==-1 )){
 			DOM.find(".mainpic").load(()=>{
 				L.replaceWith(DOM);
+				tool();
 			});
 		}else if(info.medias){
 			DOM.find(".mainpic").load(()=>{
 				L.replaceWith(DOM);
 				subpic(DOM, info.medias.slice(1));
 			});
+		}else{
+			L.remove();
 		}
 		if(!info.type){
 			DOM.find(".mainpic").attr("src","img/img_opening.png");
 		}else if(info.type.indexOf("video")!=-1){
-			/*DOM.find(".mainpic").remove();
+			DOM.find(".mainpic").remove();
 			$('<div class="fb-video mainpic" data-href="'+info.url+'" data-width="auto" data-show-text="false" data-autoplay="false"><div class="fb-xfbml-parse-ignore"></div></div>')
-			.insertBefore(DOM.find(".heart"));*/
-			DOM.find(".mainpic").attr("src",info.media);
-			DOM.find(".middle").append('<img class="camera" src="img/icn_video.png">');
+			.insertBefore(DOM.find(".platform"));
+			//DOM.find(".mainpic").attr("src",info.media);
+			//DOM.find(".middle").append('<img class="camera" src="img/icn_video.png">');
 		}else if(info.type == "photo" || info.type == "profile_media" || ((info.type == "share")&&info.media)){
 			DOM.find(".mainpic").attr("src",info.media);
 		}else if(info.type == "album" || ((info.type == "share")&&info.medias)){
@@ -155,6 +158,10 @@ var render = [
 		DOM.find(".number").html(info.likes);
 		DOM.find(".number_m").html(info.comment_count);
 		DOM.find(".text").html(info.message);
+		if(info.type.indexOf("video")!=-1){
+			DOM.insertAfter(".top");
+			tool();
+		}
 	},
 	(DOM, info, pro, L) => {
 		DOM.find(".name").html(pro.nickname);
@@ -163,28 +170,28 @@ var render = [
 		T = Format_time(T);
 		DOM.find(".date").html(T[0]);
 		DOM.find(".time").html(T[1]);
-		DOM.find(".mainpic").load(()=>{
-			/*L.remove();
-			$(".title ul").append(DOM);*/
-			L.replaceWith(DOM);
-		});
-		DOM.find(".mainpic").attr("src",info.media);
-		DOM.find(".middle").append('<img class="camera" src="img/icn_video.png">');
+		L.remove();
+		/*L.remove();
+		$(".title ul").append(DOM);*/
+		DOM.find(".mainpic").remove();
+		//DOM.find(".middle").append('<img class="camera" src="img/icn_video.png">');
 		//DOM.find(".heart").css("bottom","-33vw");
-		//DOM.find(".platform").css("bottom","-38vw");
-		/*var i = $('<div class = "w100"><iframe class = "video" frameborder="0" allowfullscreen></iframe></div>');
+		DOM.find(".platform").css("bottom","-38vw");
+		var i = $('<div class = "w100"><iframe class = "video" frameborder="0" allowfullscreen></iframe></div>');
 		i.find(".video").attr("src","https://www.youtube.com/embed/"+info.videoId);
-		i.insertBefore(DOM.find(".heart"));*/
+		i.insertBefore(DOM.find(".platform"));
 		DOM.find(".platform").attr("src","img/badge_youtube.png");
 		DOM.find(".number").html(info.likes);//.css("bottom","-30vw");
 		DOM.find(".number_m").html(info.comment_count);
 		DOM.find(".text").html(info.title);
+		DOM.insertAfter(".top");
+		tool();
 	}
 ];
 
 var like = (DOM, post, type)=>{
 	if(type){
-		DOM.find(".number").html(post.info.likes + 1);
+		DOM.find(".number").html(parseInt(post.info.likes) + 1);
 		$.ajax({
 			url: 'https://luffy.ee.ncku.edu.tw/~fad11204/test/js/like.njs',
 			method: 'POST',
@@ -200,7 +207,7 @@ var like = (DOM, post, type)=>{
 		});
 		//like
 	}else{
-		DOM.find(".number").html(post.info.likes);
+		DOM.find(".number").html(parseInt(post.info.likes));
 		$.ajax({
 			url: 'https://luffy.ee.ncku.edu.tw/~fad11204/test/js/like.njs',
 			method: 'POST',

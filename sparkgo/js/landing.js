@@ -22,8 +22,10 @@ function tool() {
                     document.location.href = newurl;
                   }
     })
-    $('.circle .name').click(function(e){
+    $('.circle, .name').click(function(e){
                                var newurl = "profilePage.html";
+							   var SID_o = a[posts[parseInt($(this).parents("li").attr("id").substring(2))].info.index].pro.SID;
+							   window.localStorage.setItem("SID_",SID_o);
                                document.location.href = newurl;
                                })
     $('.share').click(function(e){
