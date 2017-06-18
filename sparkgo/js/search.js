@@ -1,7 +1,6 @@
 $(document).ready(function(){
                   if(window.localStorage.fromwhere == "landing"){
                     $(".topbar .search input").val(window.localStorage.keyword);
-                  if($(".topbar .search input").val() != ""){
                     $.ajax({
                            url:'https://luffy.ee.ncku.edu.tw/~fad11204/test/js/login.njs',
                            method: 'POST',
@@ -22,7 +21,6 @@ $(document).ready(function(){
                            }
                            
                            });
-                  }
                   localStorage.removeItem("keyword");
                   localStorage.removeItem("fromwhere");
                   };
