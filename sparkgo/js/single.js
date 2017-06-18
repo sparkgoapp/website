@@ -22,7 +22,7 @@ $(document).ready(()=>{
 	$.ajax({
 		url: 'https://luffy.ee.ncku.edu.tw/~fad11204/test/js/comment.njs',
 		method: 'POST',
-		data: post,
+		data: {id:((post.type==1)?post.info.videoId:post.info.pid), type: post.type},
 		success: (data)=>{
 			console.log(data);
 		},
