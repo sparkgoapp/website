@@ -54,6 +54,7 @@ input{
     height: 13.33vw;
     font-size: 4.44vw;
     color: black;
+	background-color: rgba(155,155,155,0.1);
 }
 
 button{
