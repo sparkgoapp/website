@@ -19,6 +19,17 @@ var posts = [];
 
 $(document).ready(()=>{
 	var post = JSON.parse(window.localStorage.getItem("page"));
+	$.ajax({
+		url: 'https://luffy.ee.ncku.edu.tw/~fad11204/test/js/comment.njs',
+		method: 'POST',
+		data: post,
+		success: (data)=>{
+			console.log(data);
+		},
+		error: (err)=>{
+			console.log(err);
+		}
+	});
 	posts.push(post);
 	$(document).on('FBready',Datarender(post));
 	FB_load(document, 'script', 'facebook-jssdk');
