@@ -116,11 +116,11 @@ body{
 }
 .pic{
     margin:0;
-    
 }
 .pic .mainpic{
     width:100%;
     float:clear;
+	pointer-events: all;
 }
 
 .subpic{
@@ -193,6 +193,7 @@ body{
 .middle{
     width:100%;
     position:relative;
+	pointer-events: none;
 }
 
 .interact{
