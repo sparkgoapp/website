@@ -50,11 +50,13 @@ function tool() {
 									opacity: '0'
 								});
                              })
-    $('.search').keydown(function() {
+    $('.search').keypress(function (event) {
+                          if (event.which == 13) {
                                 window.localStorage.keyword = $('#keyword').val();
                                 window.localStorage.fromwhere = "landing";
                                 document.location.href = "search-result.html";
-                             });
+                          }
+                          });
     
 
 }
