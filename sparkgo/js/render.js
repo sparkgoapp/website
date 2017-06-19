@@ -57,15 +57,7 @@ var render = [
 		T = Format_time(T);
 		DOM.find(".date").html(T[0]);
 		DOM.find(".time").html(T[1]);
-		if(info.media || !info.type){
-			DOM.find(".mainpic").load(()=>{
-				L.replaceWith(DOM);
-				eachpost[i]=1;
-				if(eachpost.indexOf(0)==-1){
-					tool();
-				}
-			});
-		}else if(info.medias){
+		if(info.medias){
 			DOM.find(".mainpic").load(()=>{
 				L.replaceWith(DOM);
 				eachpost[i]=1;
@@ -73,6 +65,14 @@ var render = [
 					tool();
 				}
 				subpic(DOM, info.medias.slice(1));
+			});
+		}else{
+			DOM.find(".mainpic").load(()=>{
+				L.replaceWith(DOM);
+				eachpost[i]=1;
+				if(eachpost.indexOf(0)==-1){
+					tool();
+				}
 			});
 		}
 		if(!info.type){
@@ -83,10 +83,12 @@ var render = [
 			.insertBefore(DOM.find(".heart"));*/
 			DOM.find(".mainpic").attr("src",info.media);
 			DOM.find(".middle").append('<img class="camera" src="img/icn_video.png">');
-		}else if(info.type == "photo" || info.type == "profile_media" || ((info.type == "share")&&info.media)){
-			DOM.find(".mainpic").attr("src",info.media);
 		}else if(info.type == "album" || ((info.type == "share")&&info.medias)){
 			DOM.find(".mainpic").attr("src",info.medias[0].media);
+		}else if(info.media){
+			DOM.find(".mainpic").attr("src",info.media);
+		}else{
+			DOM.find(".mainpic").attr("src","img/img_opening.png");
 		}
 		DOM.find(".platform").attr("src","img/badge_fb.png");
 		DOM.find(".number").html(info.likes);
@@ -143,16 +145,22 @@ var render = [
 		}
 		if(!info.type){
 			DOM.find(".mainpic").attr("src","img/img_opening.png");
+		}else if(info.type=="video_share_youtube"){
+			DOM.find(".mainpic").remove();
+			DOM.find(".platform").css("bottom","-14.5vw");
+			var videoId = info.url.substring(info.url.indexOf("?u=")+3,info.url.indexOf("&h="));
+			videoId = (videoId.indexOf("watch")!=-1)?videoId.substring(videoId.indexOf("%3Fv%3D")+7):videoId.substring(videoId.indexOf("youtu.be%2F")+11);
+			var i = $('<div class = "w100"><iframe class = "video" frameborder="0" allowfullscreen></iframe></div>');
+			i.find(".video").attr("src","https://www.youtube.com/embed/"+videoId+"?autoplay=1&rel=0");
+			i.insertBefore(DOM.find(".platform"));
 		}else if(info.type.indexOf("video")!=-1){
 			DOM.find(".mainpic").remove();
-			$('<div class="fb-video mainpic" data-href="'+info.url+'" data-width="auto" data-show-text="false" data-autoplay="false"><div class="fb-xfbml-parse-ignore"></div></div>')
+			$('<div class="fb-video mainpic" data-href="'+info.url+'" data-width="auto" data-show-text="false" data-autoplay="true"><div class="fb-xfbml-parse-ignore"></div></div>')
 			.insertBefore(DOM.find(".platform"));
-			//DOM.find(".mainpic").attr("src",info.media);
-			//DOM.find(".middle").append('<img class="camera" src="img/icn_video.png">');
-		}else if(info.type == "photo" || info.type == "profile_media" || ((info.type == "share")&&info.media)){
+		}else if(info.media){
 			DOM.find(".mainpic").attr("src",info.media);
-		}else if(info.type == "album" || ((info.type == "share")&&info.medias)){
-			DOM.find(".mainpic").attr("src",info.medias[0].media);
+		}else{
+			DOM.find(".mainpic").attr("src","img/img_opening.png");
 		}
 		DOM.find(".platform").attr("src","img/badge_fb.png");
 		DOM.find(".number").html(info.likes);
@@ -171,14 +179,10 @@ var render = [
 		DOM.find(".date").html(T[0]);
 		DOM.find(".time").html(T[1]);
 		L.remove();
-		/*L.remove();
-		$(".title ul").append(DOM);*/
 		DOM.find(".mainpic").remove();
-		//DOM.find(".middle").append('<img class="camera" src="img/icn_video.png">');
-		//DOM.find(".heart").css("bottom","-33vw");
 		DOM.find(".platform").css("bottom","-14.5vw");
 		var i = $('<div class = "w100"><iframe class = "video" frameborder="0" allowfullscreen></iframe></div>');
-		i.find(".video").attr("src","https://www.youtube.com/embed/"+info.videoId+"?autoplay=1");
+		i.find(".video").attr("src","https://www.youtube.com/embed/"+info.videoId+"?autoplay=1&rel=0");
 		i.insertBefore(DOM.find(".platform"));
 		DOM.find(".platform").attr("src","img/badge_youtube.png");
 		DOM.find(".number").html(info.likes);//.css("bottom","-30vw");
