@@ -2,7 +2,7 @@ window.fbAsyncInit = function() {
     FB.init({
     appId      : '185923091929013',
     xfbml      : true,
-    version    : 'v2.5'
+    version    : 'v2.9'
     });
 	$(document).trigger('FBready');
 };
@@ -29,6 +29,9 @@ $(document).ready(()=>{
 		error: (err)=>{
 			console.log(err);
 		}
+	});
+	$(".back").click(()=>{
+		window.history.back();
 	});
 	posts.push(post);
 	$(document).on('FBready',Datarender(post));
