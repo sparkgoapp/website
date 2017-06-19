@@ -1,6 +1,14 @@
 $(document).ready(function(){
   var p = 0;
   $('.followbutton').click(function(){
+    var spark=window.localStorage.getItem('SID_');
+    var me=window.localStorage.getItem('SID');
+    $.ajax({
+      url:'https://luffy.ee.ncku.edu.tw/~fad11204/test/njs/sub.njs',
+      method:'POST',
+      data: {  type : 1, SID : me, target : spark }
+    });
+
     if(p == 0){
       $(this).css({"border":"solid 1px #fe3824","color":"#fe3824"});
       $(this).html("已追蹤");
