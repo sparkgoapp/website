@@ -58,6 +58,7 @@ $(document).ready(()=>{
 
 	exec(window.localStorage.getItem("SID"));
 	//go();
+	$("#keyword").val("");
 });
 var Datarender = (data)=>{
 	$.each(data,function(index, value){

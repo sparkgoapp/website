@@ -176,9 +176,9 @@ var render = [
 		DOM.find(".mainpic").remove();
 		//DOM.find(".middle").append('<img class="camera" src="img/icn_video.png">');
 		//DOM.find(".heart").css("bottom","-33vw");
-		DOM.find(".platform").css("bottom","-38vw");
+		DOM.find(".platform").css("bottom","-14.5vw");
 		var i = $('<div class = "w100"><iframe class = "video" frameborder="0" allowfullscreen></iframe></div>');
-		i.find(".video").attr("src","https://www.youtube.com/embed/"+info.videoId);
+		i.find(".video").attr("src","https://www.youtube.com/embed/"+info.videoId+"?autoplay=1");
 		i.insertBefore(DOM.find(".platform"));
 		DOM.find(".platform").attr("src","img/badge_youtube.png");
 		DOM.find(".number").html(info.likes);//.css("bottom","-30vw");

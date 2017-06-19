@@ -55,7 +55,7 @@ $('.search').keypress(function (event) {
                   });
                   
 $('.exit').click(function (event) {
-                        $(".topbar .search input").val("搜尋Sparkgo");
+                        $(".topbar .search input").val("");
                  });
 var render = (DOM, info) => {
                 DOM.find(".head").attr("src",info.image);

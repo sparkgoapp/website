@@ -167,12 +167,12 @@ li .post{
 	height: 0;
 	position: relative;
 	padding-bottom: 56.25%; 
-	margin-bottom: 35vw;
+	margin-bottom: 15vw;
 }
 
 .video {
 	position: absolute;
-    top: 35vw;
+    top: 12vw;
     left: 0;
     width: 100%;
     height: 100%;
@@ -195,9 +195,9 @@ li .post{
     color:    rgba(124,138,153,0.71);
 }
 .top{
-    margin-top:8vw;
+    margin-top:6vw;
     width:100%;
-    height:15vw;
+    height:14vw;
     position: relative;
     
 }
@@ -251,18 +251,22 @@ li .post{
     padding-bottom: 2vw;
     float: left;
     color: #4a4a4a;
+	margin-bottom: 15vw;
 }
 .write{
 	font-size: 3.3vw;
-    margin-left: 4vw;
-    margin-top: 3vw;
-    margin-bottom: 8vw;
     padding-top: 1.5vw;
     padding-bottom: 1.5vw;
-    padding-left: 11vw;
+    padding-left: 10vw;
+    bottom: 4vw;
+    left: 5vw;
     border: solid 0.2vw rgba(124, 137, 153, 0.4);
-    width: 81vw;
-    color: #cccccc;
+    width: 90vw;
+    color: #4a4a4a;
     position: fixed;
     background-color: white;
+}
+
+.write:focus{
+	outline: none;
 }
