@@ -25,6 +25,7 @@ $(document).ready(()=>{
 		data: {id:((post.type==1)?post.info.videoId:post.info.pid), type: post.type},
 		success: (data)=>{
 			console.log(data);
+			Comrender(data,post);
 		},
 		error: (err)=>{
 			console.log(err);
@@ -45,4 +46,15 @@ var Datarender = (data)=>{
 		var loading = $('<li><div class="post"><img class="loading" src="img/main_empty.gif"/></div></li>');
 		loading.insertAfter(".top");
 		render[data.type+2](e,data.info,pro,loading);
+};
+
+var Comrender = (data,post)=>{
+	$.each(data.comments, (index, value)=>{
+		var e = $('<div class="reply"><div class="replyhead"></div><p class="replyname"></p><p class="replytime"></p><br><div class="replytext"></div></div><br>');
+		e.attr("id","com"+index);
+		if(index==data.comments.length-1){
+			e.find(".replytext").addClass("replytextlast").removeClass("replytext");
+		}
+		render[post.type+4](e,value);
+	});
 };

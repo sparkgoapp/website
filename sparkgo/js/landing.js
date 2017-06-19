@@ -9,7 +9,9 @@ function tool() {
                              $(this).parent().find('.heart').css("display","block");
 					  		 like($(this).parents("li"), posts[parseInt($(this).parents("li").attr("id").substring(2))], 0);
                              });
-    $('.mainpic, .text').click(function(e){
+	var path = window.location.pathname;
+	if(path.substring(path.indexOf("sparkgo/")+8)=="landing.html"){
+    	$('.mainpic, .text').click(function(e){
                   var newurl = "1m-00-singlePost.html";
                   var obj = parseInt($(this).parents("li").attr("id").substring(2));
                   var list=$(".heart,.active-heart");
@@ -21,7 +23,8 @@ function tool() {
 					window.localStorage.setItem("postpro",pro);
                     document.location.href = newurl;
                   }
-    })
+    	})
+	}
     $('.circle, .name').click(function(e){
                                var newurl = "profilePage.html";
 							   var SID_o = a[posts[parseInt($(this).parents("li").attr("id").substring(2))].info.index].pro.SID;

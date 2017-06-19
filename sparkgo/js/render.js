@@ -190,6 +190,20 @@ var render = [
 		DOM.find(".text").html(info.title);
 		DOM.insertAfter(".top");
 		tool();
+	},
+	(DOM, com) => {
+		$.getJSON("https://graph.facebook.com/"+com.from.id+"/picture",
+		{redirect: 0},
+		(data)=>{
+			DOM.find(".replyhead").css("background-image","url("+data.data.url+")").css("background-size","cover");
+		});
+		DOM.find(".replyname").html(com.from.name);
+		DOM.find(".replytext").html(com.message);
+		DOM.find(".replytextlast").html(com.message);
+		var T = new Date(com.created_time);
+		T = Format_time(T);
+		DOM.find(".replytime").html(T[0]+T[1]);
+		DOM.insertBefore(".sharebox");
 	}
 ];
 
