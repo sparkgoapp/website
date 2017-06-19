@@ -57,6 +57,14 @@ $(document).ready(()=>{
 	};
 
 	exec(window.localStorage.getItem("SID"));
+	$.ajax({
+		url: 'https://luffy.ee.ncku.edu.tw/~fad11204/test/js/pro.njs',
+		method: 'POST',
+		data: {SID: window.localStorage.getItem("SID")},
+		success: function(data){
+			window.localStorage.setItem("profile",data.profile);
+		}
+	});
 	//go();
 	$("#keyword").val("");
 });
