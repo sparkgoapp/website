@@ -1,0 +1,176 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+*{
+    margin:0;
+    font-family:'Noto Sans TC', sans-serif;
+}
+.topbar{
+    margin-top:10vw;
+    width:100%;
+    height:8%;
+    position:relative;
+}
+.back{
+    left:2vw;
+    width:12vw;
+    position:absolute;
+}
+.title{
+    left:35vw;
+    top:3vw;
+    font-size:4vw;
+    color:orange;
+    position:absolute;
+}
+.article{
+    width:100%;
+    height:40%;
+    position:relative;
+}
+.head{
+    width:8vw;
+    height:8vw;
+    border-radius:50%;
+    top:2vw;
+    left:4vw;
+    background-color:gray;
+    position:absolute;
+}
+.name{
+    font-size:3vw;
+    top:4vw;
+    left:15vw;
+    position:absolute;
+}
+.pic{
+    width:100%;
+    height:55vw;
+    background-color:#a9a9a9;
+}
+.icon{
+    top:48vw;
+    left:5vw;
+    position:absolute;
+    z-index:1;
+}
+.graybar{
+    width:100%;
+    height:10vw;
+    top:45vw;
+    background-color:#708090;
+    position:absolute;
+}
+.articletitle{
+    font-size:5vw;
+    top:60vw;
+    left:5vw;
+    color:black;
+    position:absolute;
+}
+.mission{
+    width:100%;
+    height:20vw;
+    position:relative;
+}
+.orange{
+    width:4vw;
+    top:2vw;
+    left:3vw;
+    position:absolute;
+}
+.jewel{
+    font-size:2.5vw;
+    top:2vw;
+    left:8vw;
+    position:absolute;
+}
+.percent{
+    font-size:2.5vw;
+    top:2vw;
+    left:40vw;
+    position:absolute;
+}
+.purple{
+    width:4vw;
+    top:2vw;
+    left:65vw;
+    position:absolute;
+}
+.jewelmission{
+    font-size:2.5vw;
+    top:2vw;
+    left:70vw;
+    position:absolute;
+}
+.grayline{
+    width:90%;
+    height:1vw;
+    size:10vw;
+    background-color:gray;
+    left:5vw;
+    top:10vw;
+    position:absolute;
+}
+.orangeline{
+    width:60%;
+    height:1vw;
+    size:10vw;
+    background-color:#f6a623;
+    left:5vw;
+    top:10vw;
+    position:absolute;
+    z-index:1;
+}
+.star{
+    width:4vw;
+    top:9vw;
+    left:65vw;
+    position:absolute;
+}
+.text{
+    font-size:3vw;
+    width:90vw;
+    top:15vw;
+    left:5vw;
+    positioN:absolute;
+}
+.reply{
+    position:relative;
+}
+.more{
+    font-size:3vw;
+    top:25vw;
+    left:5vw;
+    color:#362064;
+    position:absolute;
+}
+.talk{
+    width:12vw;
+    top:35vw;
+    left:5vw;
+    position:absolute;
+}
+.add{
+    font-size:3vw;
+    color:#7c8a99;
+    top:38vw;
+    left:18vw;
+    position:absolute;
+}
+.replyhead{
+    width:6vw;
+    height:6vw;
+    border-radius:50%;
+    margin-top:30vw;
+    margin-left:10vw;
+    background-color:gray;
+    position:relative;
+}
+.replyname{
+    font-size:3vw;
+    float:left;
+    margin-left:20vw;
+    color:gray;
+    position:relative;
+}
+
