@@ -38,6 +38,20 @@ $(document).ready(()=>{
 	$(document).on('FBready',Datarender(post));
 	FB_load(document, 'script', 'facebook-jssdk');
 	$(".writehead").attr("src",JSON.parse(window.localStorage.getItem("profile")).image);
+    $('.write').keypress(function (event) {
+        if (event.which == 13) {
+			var e = $('<div class="reply"><div class="replyhead"></div><p class="replyname"></p><p class="replytime"></p><br><div class="replytextlast"></div></div><br>');
+			$(".replytextlast").addClass("replytext").removeClass("replytextlast");
+			e.find(".replyhead").css("background-image","url("+$(".writehead").attr("src")+")").css("background-size","cover");
+			e.find(".replyname").html(JSON.parse(window.localStorage.getItem("profile")).nickname);
+			e.find(".replytextlast").html($(".write").val());
+			var T = new Date();
+			T = Format_time(T);
+			e.find(".replytime").html(T[0]+T[1]);
+			e.insertBefore(".sharebox");
+			$(".write").val("");
+    	}
+    });
 });
 var Datarender = (data)=>{
 		var pro = JSON.parse(window.localStorage.getItem("postpro"));

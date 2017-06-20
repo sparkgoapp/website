@@ -125,7 +125,8 @@ body{
 
 .subpic{
 	position: absolute;
-	right: 0vw;	
+	right: 0vw;
+	box-shadow: 0 0 0 2px #f6a623;
 }
 
 .subpic img{
