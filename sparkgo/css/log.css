@@ -29,6 +29,10 @@ img{
   height: 34.17vw;
 }
 
+#msg{
+	color: #f32525;
+}
+
 input::-webkit-input-placeholder { /* WebKit browsers */
     color: #000000;
     opacity: 0.38;

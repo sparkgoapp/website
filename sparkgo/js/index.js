@@ -21,7 +21,8 @@ $(document).ready(()=>{
 			}
 		});
 	};
-	if(window.location.href!="https://luffy.ee.ncku.edu.tw/~fad11204/sparkgo"&&window.location.href!="https://luffy.ee.ncku.edu.tw/~fad11204/sparkgo/"){	
+	//if(window.location.href!="https://luffy.ee.ncku.edu.tw/~fad11204/sparkgo"&&window.location.href!="https://luffy.ee.ncku.edu.tw/~fad11204/sparkgo/"){	
+	if(window.location.href.indexOf('?')!=-1){	
 		qstr = window.location.href.split("?")[1];
 		qstr = parseQuery(qstr);
 		if(qstr.state == "YT"){
@@ -32,7 +33,11 @@ $(document).ready(()=>{
 			comment(1);
 		}
 	}else{
-		window.location = "login.html";
+		if(window.localStorage.getItem("SID")){
+			window.location = "2tmain.html";
+		}else{
+			window.location = "login.html";
+		}
 	}
 });
 

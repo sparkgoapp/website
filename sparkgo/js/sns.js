@@ -10,7 +10,7 @@ $(document).ready(()=>{
 		$("#YT").hide();
 	}
 	if(FBed&&YTed){
-		window.location = "landing.html";
+		window.location = "2tmain.html";
 	}
 	$("#FB").click(()=>{
 		window.location = "https://www.facebook.com/v2.9/dialog/oauth?client_id=185923091929013&redirect_uri=https://luffy.ee.ncku.edu.tw/~fad11204/sparkgo&scope=publish_actions&state=FB";

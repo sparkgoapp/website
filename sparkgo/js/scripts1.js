@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	if(window.localStorage.getItem("SID")){
-		window.location = "landing.html";
+		window.location = "2tmain.html";
 	}
 	$("button").click(function(){
   var sec=$('input[name=pw]').val();                                                                        
@@ -14,12 +14,20 @@ $(document).ready(function(){
     		},
 		    success: (data)=>{
     	    	console.log(data);
-				if(!data.SID) return;
+				if(!data.SID) {
+					$('#msg').html(data.error);
+					return;
+				};
             	window.localStorage.setItem("SID",data.SID);
 	            window.localStorage.setItem("link","00");
 				check_token(data.SID);
 	    	}
 	    });
+	});
+	$('input[name=pw]').keypress(()=>{
+		if(event.keyCode==13){
+			$("button").click();
+		}
 	});
 });
 
@@ -34,7 +42,7 @@ function check_token(SID){
 		success: (data)=>{
 			console.log(data);
 			if(data.check){
-				window.location = "landing.html";
+				window.location = "2tmain.html";
 			}else{
 				window.localStorage.setItem("link",data.link);
 				window.location = "linksns.html";
