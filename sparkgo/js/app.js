@@ -62,7 +62,15 @@ $(document).ready(()=>{
 		method: 'POST',
 		data: {SID: window.localStorage.getItem("SID")},
 		success: function(data){
-			window.localStorage.setItem("profile",data.profile);
+			window.localStorage.setItem("profile",JSON.stringify(data.profile));
+		}
+	});
+	$.ajax({
+		url: 'https://luffy.ee.ncku.edu.tw/~fad11204/test/js/fetch.njs',
+		method: 'POST',
+		data: {},
+		success: function(data){
+			console.log(data);
 		}
 	});
 	//go();

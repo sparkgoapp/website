@@ -130,7 +130,7 @@ var render = [
 		T = Format_time(T);
 		DOM.find(".date").html(T[0]);
 		DOM.find(".time").html(T[1]);
-		if(( info.media || !info.type )&&( info.type.indexOf("video")==-1 )){
+		if(( !info.type ) || (( info.media )&&( info.type.indexOf("video")==-1 ))){
 			DOM.find(".mainpic").load(()=>{
 				L.replaceWith(DOM);
 				tool();
