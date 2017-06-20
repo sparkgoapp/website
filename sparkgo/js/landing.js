@@ -25,10 +25,14 @@ function tool() {
                   }
     	})
 	}
-    $('.circle, .name').click(function(e){
+    $('.circle, .name, .head').click(function(e){
                                var newurl = "profilePage.html";
-							   var SID_o = a[posts[parseInt($(this).parents("li").attr("id").substring(2))].info.index].pro.SID;
-							   window.localStorage.setItem("SID_",SID_o);
+							   /*var SID_o = (path.substring(path.indexOf("sparkgo/")+8)=="landing.html")?a[posts[parseInt($(this).parents("li").attr("id").substring(2))].info.index].pro.SID:
+							   JSON.parse(window.localStorage.getItem("postpro")).SID;
+							   window.localStorage.setItem("SID_",SID_o);*/
+							   var pro_o = (path.substring(path.indexOf("sparkgo/")+8)=="landing.html")?a[posts[parseInt($(this).parents("li").attr("id").substring(2))].info.index].pro:
+							   JSON.parse(window.localStorage.getItem("postpro"));
+							   window.localStorage.setItem("profile_",JSON.stringify(pro_o));
                                document.location.href = newurl;
                                })
     $('.share').click(function(e){

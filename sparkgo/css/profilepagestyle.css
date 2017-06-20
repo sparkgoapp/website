@@ -14,7 +14,7 @@
     width:12vw;
     position:absolute;
 }
-.title{
+.toptitle{
     left:35vw;
     top:3vw;
     font-size:4vw;
@@ -46,7 +46,7 @@
     top:25vw;
     position:absolute;
 }
-.name{
+.topname{
     left:40vw;
     top:8vw;
     font-size:4vw;
@@ -206,6 +206,7 @@
     position:absolute;
     z-index:1;
 }
+/*
 .articletop{
     width:100%;
     height:6%;
@@ -262,4 +263,153 @@
     left:3vw;
     color:#9b9b9b;
     position:absolute;
+}*/
+.title ul {
+    
+    padding:0;
+}
+
+.title ul li{
+    list-style-type:none;
+    width:100%;
+	padding-bottom: 5vw;
+}
+
+.title ul li .post{
+	width: 100vw;
+	box-shadow: 0 1vw 2vw -2vw;
+}    
+
+.title .circle{
+    float:left;
+    width:7vw;
+    height:7vw;
+    margin-left:2vw;
+    margin-top:2vw;
+    margin-bottom:3vw;
+    border-radius:50%;
+    background-color:gray;
+    
+}
+.title  .name{
+    float:left;
+    padding-left:3vw;
+    margin-top:3vw;
+    font-size:3vw;
+}
+.title .date{
+    float:right;
+    font-size:2.5vw;
+    margin-top:3vw;
+    padding-right: 1vw;
+}
+.title .time{
+    float:right;
+    font-size:2.5vw;
+    margin-top:3vw;
+	margin-right:3vw;
+}
+
+.title .thunder{
+    float:right;
+    margin-top:2vw;
+    width: 10%;
+    
+}
+.pic .text{
+    font-size: 3vw;
+    margin-top: 3vw;
+    margin-left: 3vw;
+    margin-right: 0vw; 
+	width: 83vw;
+	height: 5vw;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.pic{
+    margin:0;
+}
+.pic .mainpic{
+    width:100%;
+    float:clear;
+	pointer-events: all;
+}
+
+.subpic{
+	position: absolute;
+	right: 0vw;	
+}
+
+.subpic img{
+	width: 33vw;
+	object-fit: cover;
+}
+
+.picmore{
+	width: 33vw;
+	bottom: 0vw;
+	background-color: rgba(13, 8, 25, 0.71);
+}
+
+.picmore p{
+	color: white;
+	text-align: center;
+	font-size: 1vw;
+}
+
+.pic .heart, .pic .active-heart{
+    width: 9vw;
+    left: 4vw;
+    bottom: 0vw;
+    position: absolute;
+}
+.pic .platform{
+    width:7vw;
+    right:3vw;
+    bottom: -2.5vw;
+    position:absolute;
+}
+
+.pic .camera{
+	position: absolute;
+	width: 9vw;
+	right: 2vw;
+	bottom: 4vw;
+}
+
+ .pic .number{
+    font-size:3vw; 
+    left:13vw;
+    bottom:2vw;
+    position:absolute;
+ }
+ .pic .number_m{
+    font-size:3vw; 
+    left:53vw;
+    bottom:2vw;
+    position:absolute;
+ }
+.pic .message{
+	width: 8vw;
+    position: absolute;
+    left: 44vw;
+    bottom: 0vw;
+}
+
+.pic .share{
+	width: 9vw;
+    position: absolute;
+    bottom: 0vw;
+    right: 4vw;
+}
+.middle{
+    width:100%;
+    position:relative;
+	pointer-events: none;
+}
+
+.interact{
+	position: relative;
+    height: 10vw;
 }
