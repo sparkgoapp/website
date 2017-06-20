@@ -16,9 +16,9 @@
     position:absolute;
 }
 .title{
-    left:35vw;
-    top:3vw;
-    font-size:4vw;
+    left:34vw;
+    top:2vw;
+    font-size:5vw;
     color:orange;
     position:absolute;
 }
@@ -53,6 +53,22 @@
     position:absolute;
     z-index:1;
 }
+.people{
+    font-size:2.5vw;
+    top:48vw;
+    left:12vw;
+    color:#ffffff;
+    position:absolute;
+    z-index:1;
+}
+.day{
+    font-size:2.5vw;
+    top:48vw;
+    left:80vw;
+    color:#ffffff;
+    position:absolute;
+    z-index:1;
+}
 .graybar{
     width:100%;
     height:10vw;
@@ -69,7 +85,7 @@
 }
 .mission{
     width:100%;
-    height:20vw;
+    height:48vw;
     position:relative;
 }
 .orange{
@@ -93,13 +109,13 @@
 .purple{
     width:4vw;
     top:2vw;
-    left:65vw;
+    left:70vw;
     position:absolute;
 }
 .jewelmission{
     font-size:2.5vw;
     top:2vw;
-    left:70vw;
+    left:75vw;
     position:absolute;
 }
 .grayline{
@@ -135,6 +151,8 @@
     positioN:absolute;
 }
 .reply{
+    width:100%;
+    height:12vw;
     position:relative;
 }
 .more{
@@ -161,26 +179,48 @@
     width:6vw;
     height:6vw;
     border-radius:50%;
-    margin-top:30vw;
-    margin-left:10vw;
+    left:10vw;
     background-color:gray;
-    position:relative;
+    position:absolute;
 }
 .replyname{
     font-size:3vw;
-    margin-left:20vw;
-    color:gray;
-    position:relative;
+    left:20vw;
+    color:#8b572a;
+    position:absolute;
 }
-.date{
+.time{
     font-size:3vw;
-    margin-left:20vw;
+    left:32vw;
     color:gray;
-    position:relative;
+    position:absolute;
 }
 .replytext{
     font-size:3vw;
     border-left: solid 0.5vw rgba(124, 138, 153, 0.3);
-    padding-left:5vw;
-    margin-left:-26vw;
+    padding-left:6vw;
+    left:13vw;
+    top:6.5vw;
+    color:#4a4a4a;
+    position:absolute;
+}
+.bottombar{
+    width:100%;
+    height:15vw;
+    bottom:0;
+    background-color:rgba(255, 255, 255, 0.7);
+    position:fixed;
+}
+.mark{
+    width:12vw;
+    left:1vw;
+    bottom:1vw;
+    position:absolute;
+}
+.hint{
+    font-size:5vw;
+    right:7vw;
+    bottom:3vw;
+    color:#f6a623;
+    position:absolute;
 }
