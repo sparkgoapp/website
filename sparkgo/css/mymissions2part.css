@@ -1,0 +1,285 @@
+.topbar{
+    margin-top:10vw;
+    width:100%;
+    height:8%;
+    position:relative;
+}
+bottom>img{
+width:5vw;
+}
+.my{
+    width:40vw;
+    height:8vw;
+    left:10vw;
+    font-size:4vw;
+    border:none;
+    border-radius:1vw;
+    color:#f6a623;
+    border:solid 0.5vw #f6a623; 
+    background-color:ffffff;
+    position:absolute;
+}
+.join{
+    width:40vw;
+    height:8vw;
+    left:50vw;
+    font-size:4vw;
+    border-radius:1vw;
+    color:#ffffff;
+    border:solid 0.5vw #f6a623; 
+    background-color:#f6a623;
+    position:absolute;
+}
+.topbar{
+    margin-top:10vw;
+    width:100%;
+    height:8%;
+    position:relative;
+}
+.my{
+    width:40vw;
+    height:8vw;
+    left:10vw;
+    font-size:4vw;
+    border:none;
+    border-radius:1vw;
+    color:#ffffff;
+    border:solid 0.5vw #f6a623; 
+    background-color:#f6a623;
+    position:absolute;
+}
+.join{
+    width:40vw;
+    height:8vw;
+    left:50vw;
+    font-size:4vw;
+    border-radius:1vw;
+    color:#f6a623;
+    border:solid 0.5vw #f6a623; 
+    background-color:#ffffff;
+    position:absolute;
+}
+.topbar{
+    margin-top:10vw;
+    width:100%;
+    height:8%;
+    position:relative;
+}
+.topbar span{
+    position:absolute;
+}
+.topbar img{
+    position:absolute;
+}
+.main{
+    width:100%;
+    height:55vw;
+    margin-top:4vw;
+    position:relative;
+}
+.pic{
+    width:100%;
+    height:55vw;
+    background-color:gray;
+    position:absolute;
+    
+}
+
+.main p{
+    top:4vw;
+    left:2vw;
+    font-size: 4.5vw;
+    color:white;
+    position:absolute;
+}
+.bottom{
+    width:100%;
+    height:10vw;
+    bottom:0;
+    background-color:#515151;
+    position:absolute;
+}
+.bottom img{
+    top:3vw;
+    left:4vw;
+    position:absolute;
+}
+.number{
+    top:3vw;
+    left:11vw;
+    font-size: 3vw;
+    color:white;
+    position:absolute;
+}
+.day{
+    top:3vw;
+    right:4vw;
+    font-size: 3vw;
+    color:white;
+    position:absolute;
+}
+.middle{
+    width:100%;
+    height:22vw;
+    position:relative;
+}
+.head{
+    width:8vw;
+    height:8vw;
+    top:2vw;
+    left:2vw;
+    border-radius:50%;
+    background-color:gray;
+    position:absolute;
+}
+.name{
+    font-size: 3.5vw;
+    top:4vw;
+    left:15vw;
+    position:absolute;
+}
+.red{
+    width:4vw;
+    height:4vw;
+    top:4vw;
+    left:78vw;
+    border-radius:50%;
+    background-color:red;
+    position:absolute;
+}
+.expire{
+    font-size: 3vw;
+    top:4vw;
+    left:83vw;
+    color:red;
+    position:absolute;
+}
+.text{
+    font-size: 2.5vw;
+    top:12vw;
+    left:3vw;
+    right:5vw;
+    position:absolute;
+}
+.statistics{
+    width:100%;
+    height:15vw;
+    position:relative;
+}
+.gray{
+    width:4vw;
+    height:4vw;
+    top:4vw;
+    left:4vw;
+    border-radius:50%;
+    background-color:gray;
+    position:absolute;
+}
+.jewel{
+    font-size: 3vw;
+    top:4vw;
+    left:10vw;
+    color:gray;
+    position:absolute;
+}
+.percent{
+    font-size: 3vw;
+    top:4vw;
+    left:38vw;
+    color:gray;
+    position:absolute;
+}
+.purple{
+    width:4vw;
+    height:4vw;
+    top:4vw;
+    left:65vw;
+    border-radius:50%;
+    background-color:purple;
+    position:absolute;
+}
+.missionjewel{
+    font-size: 3vw;
+    top:4vw;
+    left:70vw;
+    color:purple;
+    position:absolute;
+}
+.lines{
+    width:100%;
+    height:5vw;
+    margin:0;
+    position:relative;
+}
+.grayline{
+    left:5vw;
+    right:5vw;
+    size: 10vw;
+    color:gray;
+    background-color: gray;
+    position:absolute;
+}
+.orangeline{
+    left:5vw;
+    right:20vw;
+    size: 10vw;
+    color:orange;
+    background-color: orange;
+    position:absolute;
+}
+.badge{
+    width:5vw;
+    top:-2vw;
+    left:78vw;
+    position:absolute;
+}
+.blank{
+    width:100%;
+    height:8%;
+}
+.bar{
+    bottom: 0;
+    width:100%;
+    height:12vw;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.3); 
+}
+
+.bar ul {
+  padding:0;
+}
+
+.bar ul li{
+    list-style: none;
+    float: left;
+}
+
+.bar ul li img{
+  height: 6.5vw;
+  margin-top: 2.5vw;
+}
+
+.bar ul li.a img{
+  content: url(../img/tab_icn_me.png);
+  margin-left: 6vw;
+}
+
+.bar ul li.b img{
+    content: url(../img/bar-folder.png);
+  margin-left: 14.5vw;
+}
+
+.bar ul li.c img{
+    content: url(../img/bar-thunder.png);
+  margin-left: 14.5vw;
+}
+
+.bar ul li.d img{
+    content: url(../img/tab_icn_mymissions.png);
+  margin-left: 14.5vw;
+}
+
+.bar ul li.e img{
+    content: url(../img/tab_icn_notification.png);
+  margin-left: 14.5vw;
+}

@@ -18,6 +18,7 @@
     border:none;
     border-radius:1vw;
     color:#ffffff;
+    border:solid 0.5vw #f6a623; 
     background-color:#f6a623;
     position:absolute;
 }
