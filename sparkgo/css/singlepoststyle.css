@@ -69,8 +69,10 @@ li .post{
     font-size: 3vw;
     margin-top: 3vw;
     margin-left: 3vw;
-    margin-right: 0vw; 
-	width: 100vw;
+    margin-right: 3vw; 
+	width: 94vw;
+	word-wrap: break-word;
+	white-space: pre-wrap;
 }
 .pic{
     margin:0;
