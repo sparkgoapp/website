@@ -1,3 +1,4 @@
+var a;
 $(document).ready(function(){
                   if(window.localStorage.fromwhere == "landing"){
                     $(".topbar .search input").val(window.localStorage.keyword);
@@ -6,15 +7,21 @@ $(document).ready(function(){
                            method: 'POST',
                            data:{m_u:$(".topbar .search input").val()},
                            success: function(data){
-						   console.log(data);
-							if(data.length == 0){
-                            	$('#fail').html("Sorry, there is nothing matched");
-							}
-                           $.each(data,function(index, value){
-                                   var e = $('<div class="item"><img class="head"></img><span class="name">網紅帳號或是名字</span><span class="text">網紅名字或是壹些其他的敘述</span><img class="youtube" src="img/badge_youtube.png"/><img class="fb" src="img/badge_fb.png"/><hr class="bottomline"></div>');
-                                  render(e,value);
-                                  });
-                           
+						   		a=data;
+						   		console.log(a);
+								if(data.length == 0){
+                            		$('#fail').html("Sorry, there is nothing matched");
+								}
+                           		$.each(data,function(index, value){
+                                   	var e = $('<div class="item"><img class="head"></img><span class="name">網紅帳號或是名字</span><span class="text">網紅名字或是壹些其他的敘述</span><img class="youtube" src="img/badge_youtube.png"/><img class="fb" src="img/badge_fb.png"/><hr class="bottomline"></div>');
+                                  	render(e,value);
+                                });
+						   		$('.item').click(function(){
+							   		var index = $(".item").index($(this));
+							   		console.log(index);
+							   		window.localStorage.setItem("profile_",JSON.stringify(a[index]));
+									window.location = "profilePage.html";
+						   		});
                            },
                            error: function(){
                            $('#fail').html("Sorry, there is nothing matched");
@@ -23,7 +30,8 @@ $(document).ready(function(){
                            });
                   localStorage.removeItem("keyword");
                   localStorage.removeItem("fromwhere");
-                  };
+                  }
+
 
 $('.search').keypress(function (event) {
                      if (event.which == 13) {
@@ -32,7 +40,8 @@ $('.search').keypress(function (event) {
                             method: 'POST',
                             data:{m_u:$(".topbar .search input").val()},
                             success: function(data){
-							console.log(data);
+							a=data
+							console.log(a);
 							if(data.length == 0){
                             	$('#fail').html("Sorry, there is nothing matched");
 							}
@@ -40,7 +49,12 @@ $('.search').keypress(function (event) {
                                    var e = $('<div class="item"><img class="head"></img><span class="name">網紅帳號或是名字</span><span class="text">網紅名字或是壹些其他的敘述</span><img class="youtube" src="img/badge_youtube.png"/><img class="fb" src="img/badge_fb.png"/><hr class="bottomline"></div>');
                                    render(e,value);
                                    });
-                            
+						   	$('.item').click(function(){
+							   	var index = $(".item").index($(this));
+							   	console.log(index);
+							   	window.localStorage.setItem("profile_",JSON.stringify(a[index]));
+								window.location = "profilePage.html";
+						   	});
                             },
                             error: function(){
                             $('#fail').html("Sorry, there is nothing matched");
@@ -52,17 +66,18 @@ $('.search').keypress(function (event) {
                      localStorage.removeItem("fromwhere");
 
                     });
-                  });
                   
 $('.exit').click(function (event) {
                         $(".topbar .search input").val("");
                  });
+
+});
 var render = (DOM, info) => {
                 DOM.find(".head").attr("src",info.image);
 				DOM.find(".name").html(info.nickname);
                 DOM.find(".text").html(info.nickname);
 				DOM.insertAfter(".middle");
-}
+};
 
 
 

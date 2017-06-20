@@ -1,6 +1,7 @@
 var posts = [];
 
 $(document).ready(function(){
+  var p = 0 ;
   var pro_ = JSON.parse(window.localStorage.getItem("profile_"));
   $('.head').css('background-image','url('+pro_.image+')');
   $('.head').css('background-size','cover');
@@ -21,14 +22,39 @@ $(document).ready(function(){
 				console.log(message);
 			}
 		});
-  var p = 0;
+		$.ajax({
+			url: 'https://luffy.ee.ncku.edu.tw/~fad11204/test/js/sub.njs',
+			method: 'POST',
+			data: {type:2, SID: window.localStorage.getItem('SID'), target: pro_.SID},
+			success: function(data){
+				console.log(data);
+				if(data.find == 1){
+					$('.followbutton').css({"border":"solid 1px #fe3824","color":"#fe3824"});
+					$('.followbutton').html("已追蹤");
+					var count = parseInt($('.follownumber').html()) + 1 ;
+					$('.follownumber').html(count);
+					p = 1;
+				}
+			},
+			error: function(xmlhttprequest, textstatus, message){
+				console.log(xmlhttprequest);
+				console.log(textstatus);
+				console.log(message);
+			}
+		});
   $('.followbutton').click(function(){
     var spark=pro_.SID;;
     var me=window.localStorage.getItem('SID');
     $.ajax({
-      url:'https://luffy.ee.ncku.edu.tw/~fad11204/test/njs/sub.njs',
+      url:'https://luffy.ee.ncku.edu.tw/~fad11204/test/js/sub.njs',
       method:'POST',
-      data: {  type : 1, SID : me, target : spark }
+      data: {  type : 1, SID : me, target : spark },
+	  success: (data)=>{
+	  	console.log(data);
+	  },
+	  error: (err)=>{
+	  	console.log(err);
+	  }
     });
 
     if(p == 0){
