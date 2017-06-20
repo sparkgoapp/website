@@ -83,6 +83,7 @@ li .post{
 .pic .mainpic{
     width:100%;
     float:clear;
+    pointer-events:all;
 }
 
 .subpic{
@@ -169,6 +170,7 @@ li .post{
 	position: relative;
 	padding-bottom: 56.25%; 
 	margin-bottom: 15vw;
+	
 }
 
 .video {
