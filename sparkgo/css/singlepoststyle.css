@@ -71,10 +71,6 @@ li .post{
     margin-left: 3vw;
     margin-right: 0vw; 
 	width: 83vw;
-	height: 5vw;
-	text-overflow: ellipsis;
-	overflow: hidden;
-	white-space: nowrap;
 }
 .pic{
     margin:0;
@@ -270,6 +266,16 @@ li .post{
     color: #4a4a4a;
     position: fixed;
     background-color: rgba(255, 255, 255, 0.85);
+}
+
+.writehead{
+	position: fixed;
+	width: 6vw;
+    height: 6vw;
+    border-radius: 50%;
+    background-color: gray;
+    bottom: 5vw;
+    left: 7vw;
 }
 
 .write:focus{

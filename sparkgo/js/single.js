@@ -37,6 +37,7 @@ $(document).ready(()=>{
 	posts.push(post);
 	$(document).on('FBready',Datarender(post));
 	FB_load(document, 'script', 'facebook-jssdk');
+	$(".writehead").attr("src",window.localStorage.getItem("profile"));
 });
 var Datarender = (data)=>{
 		var pro = JSON.parse(window.localStorage.getItem("postpro"));

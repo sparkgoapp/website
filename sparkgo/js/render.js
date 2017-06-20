@@ -204,6 +204,17 @@ var render = [
 		T = Format_time(T);
 		DOM.find(".replytime").html(T[0]+T[1]);
 		DOM.insertBefore(".sharebox");
+	},
+	(DOM, com) => {
+		var Com = com.snippet.topLevelComment.snippet;
+		DOM.find(".replyhead").css("background-image","url("+Com.authorProfileImageUrl+")").css("background-size","cover");
+		DOM.find(".replyname").html(Com.authorDisplayName);
+		DOM.find(".replytext").html(Com.textOriginal);
+		DOM.find(".replytextlast").html(Com.textOriginal);
+		var T = new Date(Com.updatedAt);
+		T = Format_time(T);
+		DOM.find(".replytime").html(T[0]+T[1]);
+		DOM.insertBefore(".sharebox");
 	}
 ];
 
