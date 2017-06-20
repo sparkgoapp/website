@@ -170,7 +170,7 @@ li .post{
 	position: relative;
 	padding-bottom: 56.25%; 
 	margin-bottom: 15vw;
-	
+	pointer-events:all;
 }
 
 .video {
