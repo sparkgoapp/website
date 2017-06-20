@@ -65,14 +65,14 @@ $(document).ready(()=>{
 			window.localStorage.setItem("profile",JSON.stringify(data.profile));
 		}
 	});
-	$.ajax({
+	/*$.ajax({
 		url: 'https://luffy.ee.ncku.edu.tw/~fad11204/test/js/fetch.njs',
 		method: 'POST',
 		data: {},
 		success: function(data){
 			console.log(data);
 		}
-	});
+	});*/
 	//go();
 	$("#keyword").val("");
 });

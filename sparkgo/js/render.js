@@ -166,7 +166,7 @@ var render = [
 		DOM.find(".number").html(info.likes);
 		DOM.find(".number_m").html(info.comment_count);
 		DOM.find(".text").html(info.message);
-		if(info.type.indexOf("video")!=-1){
+		if((info.type)&&(info.type.indexOf("video")!=-1)){
 			DOM.insertAfter(".top");
 			tool();
 		}
