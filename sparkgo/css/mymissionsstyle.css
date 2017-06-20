@@ -10,9 +10,26 @@
     height:8%;
     position:relative;
 }
-.back{
-    left:2vw;
-    width:12vw;
+.my{
+    width:40vw;
+    height:8vw;
+    left:10vw;
+    font-size:4vw;
+    border:none;
+    border-radius:1vw;
+    color:#ffffff;
+    background-color:#f6a623;
+    position:absolute;
+}
+.join{
+    width:40vw;
+    height:8vw;
+    left:50vw;
+    font-size:4vw;
+    border-radius:1vw;
+    color:#f6a623;
+    border:solid 0.5vw #f6a623; 
+    background-color:#ffffff;
     position:absolute;
 }
 .title{
@@ -81,6 +98,18 @@
     top:60vw;
     left:5vw;
     color:black;
+    position:absolute;
+}
+.edit{
+    width:30vw;
+    height:8vw;
+    top:60vw;
+    left:65vw;
+    font-size:4vw;
+    border-radius:1vw;
+    color:#54c7fc;
+    border:solid 0.5vw #54c7fc; 
+    background-color:#ffffff;
     position:absolute;
 }
 .mission{
@@ -223,4 +252,49 @@
     bottom:3vw;
     color:#f6a623;
     position:absolute;
+}
+.bar{
+    width:100%;
+    height:15vw;
+    bottom:0;
+    background-color:rgba(255, 255, 255, 0.7);
+    position:fixed;
+}
+.bar ul {
+  padding:0;
+}
+
+.bar ul li{
+    list-style: none;
+    float: left;
+}
+
+.bar ul li img{
+  height: 6.5vw;
+  margin-top: 2.5vw;
+}
+
+.bar ul li.a img{
+  content: url(../img/tab_icn_me.png);
+  margin-left: 6vw;
+}
+
+.bar ul li.b img{
+    content: url(../img/bar-folder.png);
+  margin-left: 14.5vw;
+}
+
+.bar ul li.c img{
+    content: url(../img/tab_icn_oncall.png);
+  margin-left: 14.5vw;
+}
+
+.bar ul li.d img{
+    content: url(../img/tab_icn_mymissions_active.png);
+  margin-left: 14.5vw;
+}
+
+.bar ul li.e img{
+    content: url(../img/tab_icn_notification.png);
+  margin-left: 14.5vw;
 }
