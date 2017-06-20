@@ -59,7 +59,10 @@
     font-size:4vw;
 }
 .nametext{
-    font-size:4vw;
+    font-size:3vw;
+    color:#9b9b9b;
+    margin:5vw;
+    position:relative;
 }
 .intro{
     width:100%;
@@ -71,5 +74,10 @@
     font-size:4vw;
 }
 .introtext{
-    font-size:4vw;
+    width:90%;
+    font-size:3vw;
+    margin:5vw;
+    color:#9b9b9b;
+    position:relative;
+    
 }

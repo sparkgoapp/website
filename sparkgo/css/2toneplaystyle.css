@@ -168,9 +168,19 @@
 }
 .replyname{
     font-size:3vw;
-    float:left;
     margin-left:20vw;
     color:gray;
     position:relative;
 }
-
+.date{
+    font-size:3vw;
+    margin-left:20vw;
+    color:gray;
+    position:relative;
+}
+.replytext{
+    font-size:3vw;
+    border-left: solid 0.5vw rgba(124, 138, 153, 0.3);
+    padding-left:5vw;
+    margin-left:-26vw;
+}
