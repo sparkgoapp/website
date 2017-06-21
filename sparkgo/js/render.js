@@ -202,8 +202,8 @@ var render = [
 		DOM.find(".replytextlast").html(com.message);
 		var T = new Date(com.created_time);
 		T = Format_time(T);
-		DOM.find(".replytime").html(T[0]+T[1]);
-		DOM.insertBefore(".sharebox");
+		DOM.find(".replytime").html(T[0]+" "+T[1]);
+		DOM.insertAfter("#po0");
 	},
 	(DOM, com) => {
 		var Com = com.snippet.topLevelComment.snippet;
@@ -213,8 +213,8 @@ var render = [
 		DOM.find(".replytextlast").html(Com.textOriginal);
 		var T = new Date(Com.updatedAt);
 		T = Format_time(T);
-		DOM.find(".replytime").html(T[0]+T[1]);
-		DOM.insertBefore(".sharebox");
+		DOM.find(".replytime").html(T[0]+" "+T[1]);
+		DOM.insertAfter("#po0");
 	}
 ];
 

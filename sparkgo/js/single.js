@@ -47,7 +47,7 @@ $(document).ready(()=>{
 			e.find(".replytextlast").html($(".write").val());
 			var T = new Date();
 			T = Format_time(T);
-			e.find(".replytime").html(T[0]+T[1]);
+			e.find(".replytime").html(T[0]+" "+T[1]);
 			e.insertBefore(".sharebox");
 			$(".write").val("");
     	}
@@ -67,7 +67,7 @@ var Comrender = (data,post)=>{
 	$.each(data.comments, (index, value)=>{
 		var e = $('<div class="reply"><div class="replyhead"></div><p class="replyname"></p><p class="replytime"></p><br><div class="replytext"></div></div><br>');
 		e.attr("id","com"+index);
-		if(index==data.comments.length-1){
+		if(index==0){
 			e.find(".replytext").addClass("replytextlast").removeClass("replytext");
 		}
 		render[post.type+4](e,value);

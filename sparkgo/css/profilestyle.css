@@ -132,6 +132,8 @@
     left:2vw;
     position:absolute;
     background-color:gray;
+	background-image:url("https://scontent.xx.fbcdn.net/v/t1.0-9/p720x720/19225651_1854322041554621_3981552413516414343_n.png?oh=d3f956aa480ec2a109d1d59fa9ae882a&oe=59E88005");
+	background-size:cover;
 }
 .picicon{
     width:3vw;
