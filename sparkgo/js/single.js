@@ -40,6 +40,17 @@ $(document).ready(()=>{
 	$(".writehead").attr("src",JSON.parse(window.localStorage.getItem("profile")).image);
     $('.write').keypress(function (event) {
         if (event.which == 13) {
+			$.ajax({
+				url: 'https://luffy.ee.ncku.edu.tw/~fad11204/test/js/doComment.njs',
+				method: 'POST',
+				data: {type: post.type, com: $(".write").val(), SID: window.localStorage.getItem("SID"), id: ((post.type==1)?post.info.videoId:post.info.pid)},
+				success: (data)=>{
+					console.log(data);
+				},
+				error: (err)=>{
+					console.log(err);
+				}
+			});
 			var e = $('<div class="reply"><div class="replyhead"></div><p class="replyname"></p><p class="replytime"></p><br><div class="replytextlast"></div></div><br>');
 			$(".replytextlast").addClass("replytext").removeClass("replytextlast");
 			e.find(".replyhead").css("background-image","url("+$(".writehead").attr("src")+")").css("background-size","cover");
