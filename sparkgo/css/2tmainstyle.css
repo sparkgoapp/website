@@ -50,9 +50,11 @@
 .pic{
     width:100%;
     height:55vw;
-    background-color:gray;
+    background-color:white;
     position:absolute;
-    
+	background-image:url("../img/img_login_header");
+	background-size: cover;
+	background-position: center;
 }
 
 .main p{
@@ -66,12 +68,13 @@
     width:100%;
     height:10vw;
     bottom:0;
-    background-color:#515151;
+    background-color:rgba(81, 81, 81, 0.63);
     position:absolute;
 }
 .bottom img{
-    top:3vw;
-    left:4vw;
+    top:4vw;
+    left:5vw;
+	width:2.5vw;
     position:absolute;
 }
 .number{
@@ -114,14 +117,14 @@
     top:4vw;
     left:78vw;
     border-radius:50%;
-    background-color:red;
+    background-color:#fe3824;
     position:absolute;
 }
 .expire{
     font-size: 3vw;
     top:4vw;
     left:83vw;
-    color:red;
+    color:#fe3824;
     position:absolute;
 }
 .text{
@@ -142,21 +145,21 @@
     top:4vw;
     left:4vw;
     border-radius:50%;
-    background-color:gray;
+    background-color:#9b9b9b;
     position:absolute;
 }
 .jewel{
     font-size: 3vw;
     top:4vw;
     left:10vw;
-    color:gray;
+    color:#9b9b9b;
     position:absolute;
 }
 .percent{
     font-size: 3vw;
     top:4vw;
     left:38vw;
-    color:gray;
+    color:#9b9b9b;
     position:absolute;
 }
 .purple{
@@ -165,14 +168,14 @@
     top:4vw;
     left:65vw;
     border-radius:50%;
-    background-color:purple;
+    background-color:#9866ff;
     position:absolute;
 }
 .missionjewel{
     font-size: 3vw;
     top:4vw;
     left:70vw;
-    color:purple;
+    color:#9866ff;
     position:absolute;
 }
 .lines{
@@ -188,19 +191,21 @@
     color:gray;
     background-color: gray;
     position:absolute;
+	border: none;
 }
 .orangeline{
     left:5vw;
-    right:20vw;
+    width: 0%;
     size: 10vw;
     color:orange;
     background-color: orange;
     position:absolute;
+	border: none;
 }
 .badge{
     width:5vw;
-    top:-2vw;
-    left:78vw;
+    top:-1.5vw;
+    left:3vw;
     position:absolute;
 }
 .blank{

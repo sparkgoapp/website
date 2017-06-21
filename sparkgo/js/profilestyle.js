@@ -31,8 +31,8 @@ $(document).ready(function(){
 				if(data.find == 1){
 					$('.followbutton').css({"border":"solid 1px #fe3824","color":"#fe3824"});
 					$('.followbutton').html("已追蹤");
-					var count = parseInt($('.follownumber').html()) + 1 ;
-					$('.follownumber').html(count);
+					var count = parseInt($('.fannumber').html()) + 1 ;
+					$('.fannumber').html(count);
 					p = 1;
 				}
 			},
@@ -60,15 +60,15 @@ $(document).ready(function(){
     if(p == 0){
       $(this).css({"border":"solid 1px #fe3824","color":"#fe3824"});
       $(this).html("已追蹤");
-      var count = parseInt($('.follownumber').html()) + 1 ;
-      $('.follownumber').html(count);
+      var count = parseInt($('.fannumber').html()) + 1 ;
+      $('.fannumber').html(count);
       p = 1;
     }
     else{
       $(this).css({"border":"solid 1px orange","color":"orange"});
       $(this).html("追蹤");
-      var count = parseInt($('.follownumber').html()) - 1 ;
-      $('.follownumber').html(count);
+      var count = parseInt($('.fannumber').html()) - 1 ;
+      $('.fannumber').html(count);
       p = 0;
     }
   });
