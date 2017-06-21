@@ -19,11 +19,24 @@ var exec;
 var go;
 var posts = [];
 
+function input_fold(d){
+	if(d){
+		$(".topbar").css("top","-20vw").css("border-bottom","none");
+		$(".search").css("top","-17vw");
+		$(".title").css("margin-top","0vw");
+	}else{
+		$(".topbar").css("top","0vw").css("border-bottom","solid #f6a623 0.2vw");
+		$(".search").css("top","3vw");
+		$(".title").css("margin-top","20vw");
+	}
+}
+
 $(document).ready(()=>{
 	var S = window.localStorage.getItem("scroll");
 	if(S){
-		console.log(typeof S);
-		setTimeout(()=>{$(window).scrollTop(S)},1500);
+		setTimeout(()=>{
+			$(window).scrollTop($("#"+S).offset().top);
+		},1500);
 	}
 	window.localStorage.removeItem("scroll");
 	exec = (usr)=>{	
@@ -81,6 +94,16 @@ $(document).ready(()=>{
 	});*/
 	//go();
 	$("#keyword").val("");
+	$(window).scroll(()=>{
+		{previousTop:0};
+		var currentTop = $(window).scrollTop();
+		if(currentTop > this.previousTop){
+			input_fold(1);
+		}else{
+			input_fold(0);
+		}
+		this.previousTop = currentTop;
+	});
 });
 var Datarender = (data)=>{
 	$.each(data,function(index, value){

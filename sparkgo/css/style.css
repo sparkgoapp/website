@@ -14,21 +14,23 @@ body{
 }
 
 .topbar{
-    top:0;
+    top:0vw;
     position:fixed;
     background-color:white;
     width:100%;
     height:20vw;
     z-index: 2;
-
+	transition: 0.5s;
+	border-bottom: solid #f6a623 0.2vw;
 }
 .search{
     top:3vw;
     position: fixed;
     margin-top:3vw;
     background-color:white;
-    
+	transition: 0.5s;
 }
+    
 .search .searchicon{
     width:13vw;
     left:4vw;
@@ -50,6 +52,7 @@ body{
 
 .title{
     margin-top:20vw;
+	transition: 0.5s;
 }
 .title ul {
     

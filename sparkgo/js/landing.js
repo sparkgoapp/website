@@ -19,7 +19,7 @@ function tool() {
                   if(!list.is(e.target) && list.has(e.target).length === 0){
                     var pos = JSON.stringify(posts[obj]);
 					var pro = JSON.stringify(a[posts[obj].info.index].pro);
-					window.localStorage.setItem("scroll",$(window).scrollTop());
+					window.localStorage.setItem("scroll",$(this).parents("li").attr("id"));
                     window.localStorage.setItem("page",pos);
 					window.localStorage.setItem("postpro",pro);
                     document.location.href = newurl;
