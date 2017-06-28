@@ -62,7 +62,7 @@ var render = [
 				L.replaceWith(DOM);
 				eachpost[i]=1;
 				if(eachpost.indexOf(0)==-1){
-					if(window.location.path=="~fad11204/sparkgo/landing.html"){
+					if(window.location.pathname=="~fad11204/sparkgo/landing.html"){
 						var S = window.localStorage.getItem("scroll");
 						if(S){
 							$(window).scrollTop($("#"+S).offset().top);
@@ -115,6 +115,13 @@ var render = [
 			L.replaceWith(DOM);
 			eachpost[i]=1;
 			if(eachpost.indexOf(0)==-1){
+					if(window.location.pathname=="~fad11204/sparkgo/landing.html"){
+						var S = window.localStorage.getItem("scroll");
+						if(S){
+							$(window).scrollTop($("#"+S).offset().top);
+						}
+						window.localStorage.removeItem("scroll");
+					}
 				tool();
 			}
 		});
