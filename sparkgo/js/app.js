@@ -32,13 +32,6 @@ function input_fold(d){
 }
 
 $(document).ready(()=>{
-	var S = window.localStorage.getItem("scroll");
-	if(S){
-		setTimeout(()=>{
-			$(window).scrollTop($("#"+S).offset().top);
-		},1500);
-	}
-	window.localStorage.removeItem("scroll");
 	exec = (usr)=>{	
 		$.ajax({
 			url: 'https://luffy.ee.ncku.edu.tw/~fad11204/test/js/sub.njs',
