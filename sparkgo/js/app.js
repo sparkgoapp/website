@@ -23,11 +23,9 @@ function input_fold(d){
 	if(d){
 		$(".topbar").css("top","-20vw").css("border-bottom","none");
 		$(".search").css("top","-17vw");
-		$(".title").css("margin-top","0vw");
 	}else{
 		$(".topbar").css("top","0vw").css("border-bottom","solid #f6a623 0.2vw");
 		$(".search").css("top","3vw");
-		$(".title").css("margin-top","20vw");
 	}
 }
 
@@ -82,7 +80,7 @@ $(document).ready(()=>{
 		method: 'POST',
 		data: {},
 		success: function(data){
-			console.log(data);
+			console.log("update success");
 		}
 	});
 	//go();
@@ -126,7 +124,7 @@ var Sort = (data)=>{
     for(var i = 0, L = data.length; i<L ; i++){
     	posts = posts.concat(data[i].FBpost.concat(data[i].YTpost));
     }
-   	posts.sort((a,b)=>{return (a.info.time > b.info.time)?(-1):(1)});
+   	posts = posts.sort((a,b)=>{return (a.info.time > b.info.time)?(-1):(1)}).slice(0, 50);
     console.log(posts);
 	return posts;
 };

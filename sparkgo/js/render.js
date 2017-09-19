@@ -62,8 +62,9 @@ var render = [
 				L.replaceWith(DOM);
 				eachpost[i]=1;
 				if(eachpost.indexOf(0)==-1){
-					console.log(window.location.pathname);
-					if(window.location.pathname=="/~fad11204/sparkgo/landing.html"){
+					var path = window.location.pathname;
+					if(path.substring(path.indexOf("sparkgo/")+8)=="landing.html"){
+						console.log(path);
 						var S = window.localStorage.getItem("scroll");
 						if(S){
 							$(window).scrollTop($("#"+S).offset().top);
@@ -79,6 +80,15 @@ var render = [
 				L.replaceWith(DOM);
 				eachpost[i]=1;
 				if(eachpost.indexOf(0)==-1){
+					var path = window.location.pathname;
+					if(path.substring(path.indexOf("sparkgo/")+8)=="landing.html"){
+						console.log(path);
+						var S = window.localStorage.getItem("scroll");
+						if(S){
+							$(window).scrollTop($("#"+S).offset().top);
+						}
+						window.localStorage.removeItem("scroll");
+					}
 					tool();
 				}
 			});
@@ -116,8 +126,9 @@ var render = [
 			L.replaceWith(DOM);
 			eachpost[i]=1;
 			if(eachpost.indexOf(0)==-1){
-				console.log(window.location.pathname);
-				if(window.location.pathname=="/~fad11204/sparkgo/landing.html"){
+				var path = window.location.pathname;
+				if(path.substring(path.indexOf("sparkgo/")+8)=="landing.html"){
+					console.log(path);
 					var S = window.localStorage.getItem("scroll");
 					if(S){
 						$(window).scrollTop($("#"+S).offset().top);
@@ -173,6 +184,8 @@ var render = [
 			DOM.find(".mainpic").remove();
 			$('<div class="fb-video mainpic" data-href="'+info.url+'" data-width="auto" data-show-text="false" data-autoplay="true"><div class="fb-xfbml-parse-ignore"></div></div>')
 			.insertBefore(DOM.find(".platform"));
+		}else if(info.type == "album" || ((info.type == "share")&&info.medias)){
+			DOM.find(".mainpic").attr("src",info.medias[0].media);
 		}else if(info.media){
 			DOM.find(".mainpic").attr("src",info.media);
 		}else{
